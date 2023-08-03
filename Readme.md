@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Aleksandr Klyuchnik](https://up.htmlacademy.ru/htmlcss-individual/1/user/2342117).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Картавый](https://htmlacademy.ru/profile/artem_k).
 
 ---
 
