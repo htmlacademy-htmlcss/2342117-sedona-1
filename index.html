@@ -79,71 +79,75 @@
           </li>
         </ul>
       </section>
+      <!-- по тренеруюсь со структурой, думаю сможем откатить эти изменения -->
       <section class="invitation">
         <h2 class="invitation-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <span class="visually-hidden">Приглашение посетить Седону.</span>
         <p class="description">Опытный персонал и качественное обслуживание!</p>
+
+        <div class="recomendation">
+          <span class="visually-hidden">Рекомендации.</span>
+          <ul class="recomendation-list">
+            <li class="recomendation-item">
+              <h3 class="recomendation-title">Жильё</h3>
+              <p class="recomendation-description">Рекомендуем пожить в настоящем мотеле,
+                всё как в кино!</p>
+            </li>
+            <li class="recomendation-item">
+              <h3 class="recomendation-title">Еда</h3>
+              <p class="recomendation-description">Всегда заказывайте топовый фирменный бургер,
+                вы не разочаруетесь!</p>
+            </li>
+            <li class="recomendation-item">
+              <h3 class="recomendation-title">Сувениры</h3>
+              <p class="recomendation-description">Не только китайского,
+                но и настоящего местного производства!</p>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="recomendation">
-        <h2 class="visually-hidden">Рекомендации</h2>
-        <ul class="recomendation-list">
-          <li class="recomendation-item">
-            <h3 class="recomendation-title">Жильё</h3>
-            <p class="recomendation-description">Рекомендуем пожить в настоящем мотеле,
-              всё как в кино!</p>
-          </li>
-          <li class="recomendation-item">
-            <h3 class="recomendation-title">Еда</h3>
-            <p class="recomendation-description">Всегда заказывайте топовый фирменный бургер,
-              вы не разочаруетесь!</p>
-          </li>
-          <li class="recomendation-item">
-            <h3 class="recomendation-title">Сувениры</h3>
-            <p class="recomendation-description">Не только китайского,
-              но и настоящего местного производства!</p>
-          </li>
-        </ul>
-      </section>
-      <section class="offer">
+      <section class="offer-subscribe">
         <h2 class="offer-question">Заинтересовались?</h2>
+        <span class="visually-hidden">Выберите гостиницу или подпишитесь на рассылку.</span>
         <p class="offer-date">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
           гостиниц в Седоне</p>
         <a class="button-search" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
-      </section>
-      <section class="subscribe">
-        <h2 class="subscribe-heading">Подпишитесь на рассылку</h2>
-        <p class="subscribe-slogan">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="email">Email</label>
-          <input id="email" name="your-email" type="text" placeholder="your@email.ru">
-          <button class="subscribe-button" type="submit">Подписаться</button>
-        </form>
+
+        <div class="subscribe">
+          <h2 class="subscribe-heading">Подпишитесь на рассылку</h2>
+          <p class="subscribe-slogan">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="subscribe" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="email">Email</label>
+            <input id="email" name="your-email" type="text" placeholder="your@email.ru">
+            <button class="subscribe-button" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="footer">
-        <span class="visually-hidden">Как нас найти.</span>
-        <ul class="socials-list">
-          <li class="socials-item">
-            <a class="social-link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы Вконтакте.</span>
-            </a>
-          </li>
-          <li class="socials-item">
-            <a class="social-link" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграм.</span>
-            </a>
-          </li>
-          <li class="socials-item">
-            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы на Ютуб.</span>
-            </a>
-          </li>
-        </ul>
-        <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="websitе-htmlacademy" href="https://htmlacademy.ru/">
-          <img class="logo-htmlacademy" src="#" alt="Логотип Академии.">
-        </a>
-      </section>
+      <span class="visually-hidden">Как нас найти.</span>
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a class="social-link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы Вконтакте.</span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="social-link" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграм.</span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы на Ютуб.</span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="websitе-htmlacademy" href="https://htmlacademy.ru/">
+        <img class="logo-htmlacademy" src="#" alt="Логотип Академии.">
+      </a>
+
     </footer>
   </body>
 
