@@ -33,6 +33,10 @@ body {
   color: #333;
 }
 
+.main-nav{
+  list-style: none;
+}
+
 .main-nav-link {
   font-family: "PT Sans", sans-serif;
   line-height: 24px;
@@ -44,6 +48,27 @@ body {
   text-decoration: none;
 
 }
+
+.nav-user {
+text-align: right;
+list-style: none;
+}
+
+.modal{
+  background-color: #FFF;
+  text-align: center;
+  weight: 160;
+  height: 36;
+  padding: 8px 50px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #756157;
+  text-decoration: none;
+}
+
 
 /* main */
 .page-main {
@@ -170,4 +195,29 @@ width: 452px; */
   line-height: 36px;
   text-transform: uppercase;
 
+}
+
+/* футер */
+.page-footer {
+
+
+
+}
+
+/* соц сети */
+.socials-list {
+text-align: left;
+
+}
+
+
+/* телефон */
+.footer-contacts-address-phone {
+text-align: center;
+
+}
+логотип
+
+.websitе-htmlacademy {
+text-align: right;
 }
