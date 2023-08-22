@@ -31,78 +31,80 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  background-color: #FFF;
-  color: #333;
-
+  background-color: #ffffff;
+  color: #333333;
 }
 
-/* page */
 .page-header {
-
-  background-color: #FFF;
-  color: #333;
+  background-color: #ffffff;
+  color: #333333;
 }
 
+/* навигация по сайту */
 .main-nav {
   list-style: none;
 }
 
 .main-nav-link {
-  font-family: "PT Sans", sans-serif;
-  line-height: 24px;
-  font-weight: 700;
-  background-color: #FFF;
-  color: #333;
-  text-transform: capitalize;
   text-align: center;
+  text-transform: capitalize;
   text-decoration: none;
 
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: #333333;
 }
 
+/* меню пользователя */
 .nav-user {
   text-align: right;
   list-style: none;
 }
 
-.modal {
-  background-color: #FFF;
-  text-align: center;
-  weight: 160;
-  height: 36;
+.nav-user-link-button {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-radius: 4px;
   padding: 8px 50px;
+  width: 160px;
+
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  text-transform: uppercase;
-  color: #FFF;
-  background-color: #756157;
-  text-decoration: none;
-}
+  text-align: center;
 
+  color: #ffffff;
+  background: #756157;
+}
 
 /* main */
-/* .page-main {
-  background-image: url(../images/sedona/index-background.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-} */
-
-/* wellkom */
 .greetings {
-  text-align: center;
   background-image: url(../images/sedona/index-background.jpg);
-  /* width: 1200px; */
   height: 485px;
   background-size: 100% auto;
+  text-align: center;
+
   background-repeat: no-repeat;
+  background-color: #000000;
 
 }
 
-.sedona h2 {
+.slogan {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
+
   text-transform: uppercase;
+  color: #000000;
+}
+
+.about-advantage {
+  color: #333333;
 }
 
 /* список преимуществ */
@@ -113,18 +115,21 @@ body {
 }
 
 .advantage-title {
-text-align: center;
-font-size: 24px;
-font-weight: 700;
-line-height: 28px;
-text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
+
+
 .about-advantage {
-  color: #333;
-font-size: 18px;
-font-weight: 400;
-line-height: 21px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
 }
 
 
@@ -216,14 +221,15 @@ line-height: 21px;
   align-items: center;
   font-family: "PT Sans";
   color: #000;
-font-size: 18px;
-font-weight: 400;
-line-height: 24px;
-background-color: ##F2F2F2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: ##F2F2F2;
 
 
 
 }
+
 /* футер */
 
 .socials-list {
@@ -237,4 +243,33 @@ footer-contacts-address-phone {
   font-weight: 400;
   line-height: 40px;
   text-transform: uppercase;
+}
+
+/* каталог */
+
+.hotels {
+  background-image: url(../images/search-bar/background-image.png);
+  color: #FFF;
+  background-color: #020101;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.catalog-filter-title,
+{
+color: #FFF;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+text-transform: capitalize;
+}
+
+.catalog-filter-item {
+  list-style: none;
+  color: #FFF;
+  background-color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
 }
