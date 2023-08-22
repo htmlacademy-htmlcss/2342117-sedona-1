@@ -98,12 +98,11 @@ body {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-
   text-transform: uppercase;
   color: #000000;
 }
 
-.about-advantage {
+.causes {
   color: #333333;
 }
 
@@ -111,30 +110,75 @@ body {
 .advantage-list {
   list-style: none;
   text-align: center;
+}
+
+/* li */
+.advantage-item {
+  width: 400px;
+  height: 385px;
+  padding: 103px 85px;
+}
+
+.advantage-item:nth-child(1),
+.advantage-item:nth-child(5) {
+  background-color: #82B3D3;
+}
+
+.advantage-item:nth-child(2),
+.advantage-item:nth-child(4) {
+  background-color: #83B3D31F;
 
 }
 
+.advantage-item:nth-child(3) {
+  background-color: #83B3D333;
+
+}
+
+/* h3 */
 .advantage-title {
-  text-align: center;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+
   text-transform: uppercase;
+  color: #000000;
+}
+
+.advantage-title:nth-child(1),
+.advantage-title:nth-child(5) {
   color: #ffffff;
 }
 
 
+/* вариант В
+ .advantage-title:nth-child(2),
+.advantage-title:nth-child(3),
+.advantage-title:nth-child(4) {
+  color: #000000;
+} */
 
+/* вариант С
+.advantage-title:first-child,
+.advantage-title:last-child {
+  color: #ffffff;
+} */
+
+
+
+/* P */
 .about-advantage {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+}
+
+.about-advantage:nth-child(1),
+.about-advantage:nth-child(5) {
   color: #ffffff;
 }
 
-
-
-/* приезжайте в седону  */
+/* приезжайте в седону */
 .invitation {
   text-align: center;
 }
@@ -144,40 +188,50 @@ body {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
+
   text-transform: uppercase;
+  color: #000000;
+}
+
+.description {
+  color: #333333;
 }
 
 /* рекомендации */
-.recomendation-list {
+.recommendation-list {
   list-style: none;
 }
 
-
-.recomendation-item,
-.recomendation-item-individual {
+.recommendation-item,
+.recommendation-item-individual {
   width: 400px;
   height: 385px;
-  outline: 4px solid white;
-  background-color: #83B3D3;
+  outline: 4px solid #ffffff;
+  background-color: #83b3d31f;
   text-align: center;
   padding: 80px 85px;
 }
 
+.recommendation-item-individual {
+  background-color: #ffffff;
+}
 
-.recomendation-title {
+
+.recommendation-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 /* заинтересовались? */
 .offer-question {
-  color: #000;
+  text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
+  color: #000000;
 }
 
 .offer-subscribe {
@@ -186,15 +240,22 @@ body {
 }
 
 .button-search {
-  weight: 275;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-radius: 4px;
+  padding: 8px 50px;
+  width: 275;
   height: 36;
+
+  font-family: "PT Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
-  color: #FFF;
+
+  color: #ffffff;
   background-color: #756157;
-  text-decoration: none;
+
 }
 
 /* подпишитесь на рассылку */
@@ -202,32 +263,28 @@ body {
   text-align: center;
 }
 
-
 .subscribe-button {
-  color: #FFF;
-  background: #82B3D3;
+  text-transform: uppercase;
   padding: 8px 50px;
-  text-align: center;
+
   font-family: "PT Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
+
+  color: #ffffff;
+  background: #82B3D3;
 }
 
 .subscribe-form {
-  border-radius: 4px 0px 0px 4px;
   padding: 12px 20px;
-  align-items: center;
+
   font-family: "PT Sans";
-  color: #000;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+  color: #000000;
   background-color: ##F2F2F2;
-
-
-
 }
 
 /* футер */
@@ -236,40 +293,43 @@ body {
   list-style: none;
 }
 
-footer-contacts-address-phone {
-  color: #000;
+.footer-contacts-address-phone {
+  text-transform: uppercase;
+
   text-align: center;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
-  text-transform: uppercase;
+  color: #000000;
 }
 
 /* каталог */
 
 .hotels {
   background-image: url(../images/search-bar/background-image.png);
-  color: #FFF;
-  background-color: #020101;
+
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
+
+  color: #ffffff;
+  background-color: #020101;
 }
 
-.catalog-filter-title,
-{
-color: #FFF;
-font-size: 20px;
-font-weight: 700;
-line-height: 24px;
-text-transform: capitalize;
+.catalog-filter-title {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
 }
 
 .catalog-filter-item {
   list-style: none;
-  color: #FFF;
-  background-color: #000;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
+
+  color: #ffffff;
+  background-color: #000;
 }
