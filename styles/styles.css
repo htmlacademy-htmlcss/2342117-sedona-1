@@ -1,20 +1,30 @@
 @font-face {
-  @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/ptsans-400.woff2") format("woff2");
-    font-display: swap;
-  }
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
 
-  @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../fonts/ptsans-700.woff2") format("woff2");
-    font-display: swap;
-  }
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
@@ -33,7 +43,7 @@ body {
   color: #333;
 }
 
-.main-nav{
+.main-nav {
   list-style: none;
 }
 
@@ -50,11 +60,11 @@ body {
 }
 
 .nav-user {
-text-align: right;
-list-style: none;
+  text-align: right;
+  list-style: none;
 }
 
-.modal{
+.modal {
   background-color: #FFF;
   text-align: center;
   weight: 160;
@@ -76,6 +86,7 @@ list-style: none;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+
 /* wellkom */
 .greetings {
   text-align: center;
@@ -89,32 +100,32 @@ list-style: none;
 }
 
 /* список преимуществ */
-.advantage-list{
-list-style: none;
-text-align: center;
+.advantage-list {
+  list-style: none;
+  text-align: center;
 
 }
-.advantage-title {
 
+.advantage-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+  color: #FFF;
+}
+
+.about-advantage {
+  color: #333;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
 }
 
 
 
-/* это блок я взял в лайве, но он групирует только 3 item вместо 5 */
-/* .advantage-item {
-width: 400px;
-height: 385px;
-padding: 103px 85px;
-background-color: #82B3D3;
-outline: 4px solid green;
-} */
 
 
-/* приезжайте в седону - заголовок */
+/* приезжайте в седону  */
 .invitation {
   text-align: center;
 }
@@ -133,91 +144,93 @@ outline: 4px solid green;
 }
 
 
-.recomendation-item, .recomendation-item-individual {
-width: 400px;
-height: 385px;
-outline: 4px solid white;
-background-color: #83B3D3;
-text-align: center;
-padding: 80px 85px;
+.recomendation-item,
+.recomendation-item-individual {
+  width: 400px;
+  height: 385px;
+  outline: 4px solid white;
+  background-color: #83B3D3;
+  text-align: center;
+  padding: 80px 85px;
 }
 
 
 .recomendation-title {
-
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
 }
 
-
 /* заинтересовались? */
+.offer-question {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
 .offer-subscribe {
   text-align: center;
   padding: 96px 304px;
 }
 
 .button-search {
-weight: 275;
-height: 36;
-font-size: 20px;
-font-weight: 700;
-line-height: 36px;
-text-transform: uppercase;
-color: #FFF;
-background-color: #756157;
-text-decoration: none;
+  weight: 275;
+  height: 36;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #756157;
+  text-decoration: none;
 }
 
 /* подпишитесь на рассылку */
 .subscribe {
   text-align: center;
-  /* color */
-
 }
 
-.subscribe-form {
-/* border-radius: 4px 0px 0px 4px; */
-padding: 12px 20px;
-background: #F2F2F2;
-/* height: 52px;
-width: 452px; */
-}
 
 .subscribe-button {
   color: #FFF;
   background: #82B3D3;
   padding: 8px 50px;
   text-align: center;
+  font-family: "PT Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-
 }
 
+.subscribe-form {
+  border-radius: 4px 0px 0px 4px;
+  padding: 12px 20px;
+  align-items: center;
+  font-family: "PT Sans";
+  color: #000;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+background-color: ##F2F2F2;
+
+
+
+}
 /* футер */
-.page-footer {
 
-
-
-}
-
-/* соц сети */
 .socials-list {
-text-align: left;
-
+  list-style: none;
 }
 
-
-/* телефон */
-.footer-contacts-address-phone {
-text-align: center;
-
-}
-логотип
-
-.websitе-htmlacademy {
-text-align: right;
+footer-contacts-address-phone {
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
 }
