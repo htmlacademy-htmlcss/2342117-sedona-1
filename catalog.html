@@ -17,13 +17,13 @@
         </a>
         <ul class="main-nav">
           <li class="main-nav-item">
-            <a href="#" class="main-nav-link"> Главная</a>
+            <a href="index.html" class="main-nav-link">Главная</a>
           </li>
           <li class="main-nav-item">
-            <a href="#" class="main-nav-link">О Седоне</a>
+            <a href="index.html" class="main-nav-link">О Седоне</a>
           </li>
           <li class="main-nav-item">
-            <a href="catalog.html" class="main-nav-link">Гостиницы</a>
+            <a href="#" class="main-nav-link">Гостиницы</a>
           </li>
         </ul>
         <ul class="nav-user">
@@ -34,13 +34,11 @@
           </li>
           <li class="nav-user-item">
             <a href="#" class="nav-user-link">
-              <span class="visually-hidden"> Избранное </span>
+              <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="nav-user-item">
-            <a href="#" class="nav-user-link">
-              <span class="modal"> Хочу сюда </span>
-            </a>
+            <a href="#" class="nav-user-link-button">Хочу сюда</a>
           </li>
         </ul>
       </nav>
@@ -51,10 +49,10 @@
         <span class="visually-hidden">Фильтр гостиниц Седоны.</span>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html"></a>
+            <a class="breadcrumbs-link-home" href="index.html"></a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs">Гостиницы</a>
+            <a class="breadcrumbs-link-hotels">Гостиницы</a>
           </li>
         </ul>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -63,19 +61,19 @@
             <ul class="catalog-filter-checkbox">
               <li class="catalog-filter-item">
                 <label>
-                  <input name="infrastructure" type="checkbox" value="pool" checked>
+                  <input class="pool-input" name="infrastructure" type="checkbox" value="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label>
-                  <input name="infrastructure" type="checkbox" value="parking" checked>
+                  <input class="parking-input" name="infrastructure" type="checkbox" value="parking" checked>
                   Парковка
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label>
-                  <input name="infrastructure" type="checkbox" value="wifi">
+                  <input class="wifi-input" name="infrastructure" type="checkbox" value="wifi">
                   WI-FI
                 </label>
               </li>
@@ -243,32 +241,28 @@
 
     </main>
     <footer class="catalog-footer">
-      <span class="visually-hidden">Как нас найти.</span>
-      <ul class="socials-list">
-        <li class="socials-item">
-          <a class="social-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы Вконтакте.</span>
-            height="14">
-          </a>
-        </li>
-        <li class="socials-item">
-          <a class="social-link" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Мы в Телеграм.</span>
-            height="14">
-          </a>
-        </li>
-        <li class="socials-item">
-          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Мы на Ютуб.</span>
-            height="14">
-          </a>
-        </li>
-      </ul>
-      <a class="footer-contacts-address-phone" href="tel:+78128121212">
-        height="40">
-      </a>
-      <a class="websitе-htmlacademy" href="https://htmlacademy.ru/">
-      </a>
-    </footer>
+        <span class="visually-hidden">Как нас найти.</span>
+        <ul class="socials-list">
+          <li class="socials-item">
+            <a class="social-link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы Вконтакте.</span>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a class="social-link" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в Телеграм.</span>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы на Ютуб.</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer-phone" href="tel:+78128121212"> +7(812)8121212
+        </a>
+        <a class="websitе-htmlacademy" href="https://htmlacademy.ru/">
+        </a>
+      </footer>
   </body>
 </html>
