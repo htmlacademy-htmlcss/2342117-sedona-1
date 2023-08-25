@@ -14,6 +14,7 @@
   font-display: swap;
 }
 
+/* код из критериев, в плоть до body */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -27,7 +28,20 @@
   overflow: hidden;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 body {
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -73,6 +87,7 @@ body {
   border-radius: 4px;
   padding: 8px 50px;
   width: 160px;
+  min-height: 36px;
 
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -88,7 +103,7 @@ body {
 /* main */
 
 .greetings {
-  background-image: url(../images/sedona/index-background.jpg);
+  background-image: url("../images/sedona/index-background.jpg");
   height: 485px;
   background-size: 100% auto;
   text-align: center;
@@ -140,8 +155,7 @@ body {
   width: 400px;
   height: 385px;
   padding: 103px 85px;
-  background: #82B3D3,
-    rgba(131, 179, 211, 0.12);
+  rgba(131, 179, 211, 0.12);
 }
 
 .advantage-title-second {
@@ -184,8 +198,7 @@ body {
   width: 400px;
   height: 385px;
   padding: 103px 85px;
-  background: #82B3D3,
-    rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-title-fourth {
@@ -251,7 +264,7 @@ body {
   width: 400px;
   height: 385px;
   padding: 80px 85px;
-  background: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .recommendation-title-first {
@@ -297,7 +310,7 @@ body {
   width: 400px;
   height: 385px;
   padding: 80px 85px;
-  background: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 
 }
 
@@ -336,9 +349,9 @@ body {
   border-radius: 4px;
   padding: 8px 50px;
   width: 275;
-  height: 36;
+  min-height: 36px;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -355,8 +368,11 @@ body {
 .subscribe-button {
   text-transform: uppercase;
   padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  min-height: 36px;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -368,7 +384,7 @@ body {
 .subscribe-form {
   padding: 12px 20px;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -377,7 +393,8 @@ body {
 }
 
 .subscribe-input {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
+  border: none;
   background-color: #f2f2f2;
   font-family: PT Sans;
   font-size: 18px;
@@ -395,7 +412,7 @@ body {
 
 .footer-phone {
   text-transform: uppercase;
-
+  text-decoration: none;
   text-align: center;
   font-size: 40px;
   font-weight: 400;
@@ -405,7 +422,7 @@ body {
 
 /* каталог */
 .catalog-products-filter {
-  background-image: url(../images/search-bar/background-image.png);
+  background-image: url("../images/search-bar/background-image.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #000000;
@@ -433,9 +450,11 @@ body {
 
 .catalog-filter {
   font-family: "PT Sans", sans-serif;
+  border: none;
 }
 
 .catalog-filter-title {
+
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 700;
@@ -451,12 +470,21 @@ body {
   color: #ffffff;
 }
 
+.select-control {
+  font-family: "PT Sans" sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
 .button-apply {
   border-radius: 4px;
+  border: none;
   padding: 8px 50px;
+  min-height: 36px;
   background: #82b3d3;
 
-  font-family: PT Sans;
+  font-family: "PT Sans" sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -465,12 +493,17 @@ body {
 }
 
 .button-reset {
-  font-family: PT Sans;
+  background: url("../images/search-bar/background-image.png") no-repeat lightgray 50% ;
+
+  font-family: "PT Sans" sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-  background: lightgray 50%, cover no-repeat;
+  color: #ffffff;
+  border: none;
+  min-height: 36px;
+
 }
 
 .found {
@@ -497,6 +530,10 @@ body {
   list-style: none;
 }
 
+.product-card-link {
+  text-decoration: none;
+}
+
 .product-card-title {
   font-size: 24px;
   font-style: normal;
@@ -514,10 +551,12 @@ body {
 }
 
 .product-card-button {
+  text-decoration: none;
   padding: 8px 50px;
   border-radius: 4px;
+  min-height: 36px;
+  border: none;
   color: #ffffff;
-  background-color: #000000;
   background-color: #756157;
 
   font-size: 16px;
@@ -529,7 +568,8 @@ body {
 .button-favorites {
   padding: 8px 50px;
   border-radius: 4px;
-  background-color: #000000;
+  min-height: 36px;
+  border: none;
   background-color: #82b3d3;
 
   font-size: 16px;
@@ -542,7 +582,8 @@ body {
 .button-favorites-second {
   padding: 8px 50px;
   border-radius: 4px;
-  background-color: #000000;
+  min-height: 36px;
+  border: none;
   background-color: #7db54f;
 
   font-size: 16px;
@@ -556,10 +597,10 @@ body {
   list-style: none;
 }
 
-.pagination-item{
+.pagination-item {
   width: 60px;
   height: 60px;
-  padding: 11.364px 0px 12.636px 0px;
+  padding: 11px 0 12px 0;
   border-radius: 4px;
   background-color: #82b3d3;
 }
@@ -578,7 +619,7 @@ body {
 pagination-item-fifth {
   width: 60px;
   height: 60px;
-  padding: 11.364px 0px 12.636px 0px;
+  padding: 11px 0 12px 0;
   border-radius: 4px;
   background-color: #f2f2f2;
 }
@@ -602,16 +643,16 @@ pagination-link-fifth {
 
 .subscribe-heading-catalog {
   font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-text-transform: uppercase;
-color: #000000;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .subscribe-form-catalog {
   padding: 12px 20px;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -624,8 +665,10 @@ color: #000000;
 .subscribe-button-catalog {
   text-transform: uppercase;
   padding: 8px 50px;
+  min-height: 36px;
+  border: none;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -635,7 +678,8 @@ color: #000000;
 }
 
 .subscribe-input-catalog {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
+  border: none;
   background-color: #f2f2f2;
   font-family: PT Sans;
   font-size: 18px;
