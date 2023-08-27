@@ -155,7 +155,7 @@ body {
   width: 400px;
   height: 385px;
   padding: 103px 85px;
-  rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-title-second {
@@ -351,7 +351,7 @@ body {
   width: 275;
   min-height: 36px;
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -372,7 +372,7 @@ body {
   border: none;
   min-height: 36px;
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -384,7 +384,7 @@ body {
 .subscribe-form {
   padding: 12px 20px;
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -471,7 +471,7 @@ body {
 }
 
 .select-control {
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -484,7 +484,7 @@ body {
   min-height: 36px;
   background: #82b3d3;
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -493,9 +493,9 @@ body {
 }
 
 .button-reset {
-  background: url("../images/search-bar/background-image.png") no-repeat lightgray 50% ;
+  background: url("../images/search-bar/background-image.png");
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -547,7 +547,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  color: #333333;
 }
 
 .product-card-button {
@@ -616,7 +615,7 @@ body {
 }
 
 .pagination-item-first,
-pagination-item-fifth {
+.pagination-item-fifth {
   width: 60px;
   height: 60px;
   padding: 11px 0 12px 0;
@@ -625,7 +624,7 @@ pagination-item-fifth {
 }
 
 .pagination-link-first,
-pagination-link-fifth {
+.pagination-link-fifth {
   text-decoration: none;
   text-align: center;
   font-size: 20px;
@@ -652,7 +651,7 @@ pagination-link-fifth {
 .subscribe-form-catalog {
   padding: 12px 20px;
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -668,7 +667,7 @@ pagination-link-fifth {
   min-height: 36px;
   border: none;
 
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
