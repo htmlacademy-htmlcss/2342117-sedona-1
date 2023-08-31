@@ -10,9 +10,11 @@
   </head>
 
   <body>
-    <header class="page-header">
+
+    <header class="page-main-container">
       <nav class="navigation">
         <a class="logo-link" href="index.html">
+          <img src="#" alt="Логотип." width="140" height="70">
         </a>
         <ul class="main-nav">
           <li class="main-nav-item">
@@ -42,12 +44,16 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main-container">
       <section class="greetings">
+        <div class="background-picture">
+        </div>
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+        <div class="slogan-causes">
         <h2 class="slogan">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h2>
         <p class="causes">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </div>
       </section>
       <section class="advantage">
         <span class="visually-hidden">Преимущества.</span>
@@ -55,8 +61,10 @@
           <li class="advantage-item-first">
             <h3 class="advantage-title-first">Настоящий городок</h3>
             <p class="about-advantage-first">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img class="advantage-picture" src="images/sedona/street-sedona.jpg" width="800" height="383"
-              alt="уютные улицы Седоны.">
+          </li>
+          <li class="advantage-image">
+            <img class="advantage-picture" src="images/sedona/street-sedona.jpg" width="800px" height="383px"
+            alt="уютные улицы Седоны.">
           </li>
           <li class="advantage-item-second">
             <h3 class="advantage-title-second">Небольшая площадь</h3>
@@ -70,19 +78,22 @@
             <h3 class="advantage-title-fourth">Мало туристов</h3>
             <p class="about-advantage-fourth">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
+          <li class="advantage-image">
+            <img class="advantage-picture" src="images/sedona/mountains-sedona.jpg" width="800px" height="384px"
+            alt="Природа Седоны.">
+          </li>
           <li class="advantage-item-fifth">
             <h3 class="advantage-title-fifth">Там есть мост дьявола</h3>
             <p class="about-advantage-fifth">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img class="advantage-picture" src="images/sedona/mountains-sedona.jpg" width="800" height="384"
-              alt="Природа Седоны.">
           </li>
         </ul>
       </section>
       <section class="invitation">
-        <h2 class="invitation-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <span class="visually-hidden">Приглашение посетить Седону.</span>
-        <p class="description">Опытный персонал и качественное обслуживание!</p>
-
+        <div class="invitation-title-description">
+           <h2 class="invitation-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+           <p class="description">Опытный персонал и качественное обслуживание!</p>
+        </div>
         <div class="recomendation">
           <span class="visually-hidden">Рекомендации.</span>
           <ul class="recommendation-list">
@@ -122,6 +133,7 @@
           </form>
         </div>
       </section>
+      <div/>
     </main>
     <footer class="page-footer">
       <span class="visually-hidden">Как нас найти.</span>
@@ -146,7 +158,6 @@
       </a>
       <a class="websitе-htmlacademy" href="https://htmlacademy.ru/">
         <img src="#" width="1200" height="120" alt="Логотип html academy.">
-
       </a>
     </footer>
   </body>

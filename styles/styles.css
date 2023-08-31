@@ -40,8 +40,21 @@ img {
   object-fit: contain;
 }
 
+html {
+  height: 100%;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 1200;
+
+}
+
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -50,15 +63,28 @@ body {
   color: #333333;
 }
 
-.page-header {
+.page-main-container {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
   background-color: #ffffff;
   color: #333333;
+
+
 }
 
+
 /* навигация по сайту */
+.navigation {
+  display: flex;
+}
 
 .main-nav {
   list-style: none;
+  width: 360px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav-link {
@@ -75,9 +101,11 @@ body {
 /* меню пользователя */
 
 .nav-user {
-  text-align: right;
   list-style: none;
   text-decoration: none;
+  width: 300px;
+  margin-left: auto;
+  padding: 0;
 }
 
 .nav-user-link-button {
@@ -102,17 +130,24 @@ body {
 
 /* main */
 
-.greetings {
+.background-picture {
   background-image: url("../images/sedona/index-background.jpg");
   height: 485px;
   background-size: 100% auto;
   text-align: center;
-
   background-repeat: no-repeat;
   background-color: #000000;
+
+}
+
+.slogan-causes {
+  width: 1200px;
+  padding: 69px 0px;
 }
 
 .slogan {
+  width: 620px;
+  margin: 0 auto;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -120,15 +155,28 @@ body {
   color: #000000;
 }
 
+.causes {
+  width: 651px;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
 
 /* Преимущества */
 
 .advantage-list {
+  display: flex;
+  justify-content: flex-start;
   list-style: none;
   text-align: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .advantage-item-first {
+  margin-right: 0;
   width: 400px;
   height: 385px;
   padding: 103px 85px;
@@ -243,8 +291,14 @@ body {
   text-align: center;
 }
 
+.invitation-title-description {
+  width: 1200px;
+  padding: 64px 0;
+}
+
 .invitation-title {
-  text-align: center;
+  width: 505px;
+  margin: 0 auto;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -253,9 +307,21 @@ body {
   color: #000000;
 }
 
+.description {
+  width: 490px;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
 /* рекомендации */
 
 .recommendation-list {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -406,11 +472,20 @@ body {
 
 /* футер */
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .socials-list {
+  width: 150px;
   list-style: none;
 }
 
 .footer-phone {
+  width: 330px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -418,6 +493,10 @@ body {
   font-weight: 400;
   line-height: 40px;
   color: #000000;
+}
+
+.websitе-htmlacademy {
+  width: 115px;
 }
 
 /* каталог */
