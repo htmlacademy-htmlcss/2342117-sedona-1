@@ -64,13 +64,12 @@ body {
   color: #333333;
 }
 
+/* НАВИГАЦИЯ */
 
-/* навигация по сайту */
 .navigation {
   display: flex;
   margin: o auto;
   padding: 0;
-  width: 1200px;
 }
 
 .main-nav {
@@ -96,7 +95,7 @@ body {
   color: #333333;
 }
 
-/* меню пользователя */
+/* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
 
 .nav-user {
   display: flex;
@@ -140,15 +139,15 @@ body {
   background-color: #000000;
 }
 
-.slogan-causes {
-  text-align: center;
-  width: 1200px;
-  padding: 69px 0px;
+.container-sedona {
+  padding: 70px 0;
 }
 
 .slogan {
   width: 620px;
   margin: 0 auto;
+  margin-top: 25px;
+  padding: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -159,12 +158,13 @@ body {
 .causes {
   width: 651px;
   margin: 0 auto;
+  padding: 0;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
 }
 
-/* Преимущества */
+/* ПРЕИМУЩЕСТВА */
 
 .advantage {
   width: 1200;
@@ -291,11 +291,11 @@ body {
 
 .advantage-picture-first {
   margin-left: auto;
-width: 800px;
-height: 390px;
+  width: 800px;
+  height: 390px;
 }
 
-/* приезжайте в седону */
+/* ПРИЕЗЖАЙТЕ В СЕДОНУ */
 
 .invitation {
   text-align: center;
@@ -303,13 +303,13 @@ height: 390px;
 
 .invitation-title-description {
   width: 1200px;
-  padding: 64px 0;
-  margin: 0 auto;
+  padding: 70px 0;
 }
 
 .invitation-title {
-  width: 505px;
+  width: 500px;
   margin: 0 auto;
+  padding: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -320,12 +320,13 @@ height: 390px;
 .description {
   width: 490px;
   margin: 0 auto;
+  padding: 0;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
 }
 
-/* рекомендации */
+/* РЕКОМЕНДАЦИИ */
 
 .recommendation-list {
   display: flex;
@@ -355,7 +356,6 @@ height: 390px;
   font-weight: 400;
   line-height: 21px;
 }
-
 
 .recommendation-item-second {
   width: 400px;
@@ -399,17 +399,19 @@ height: 390px;
   line-height: 21px;
 }
 
-/* заинтересовались? */
+/* ОФЕР */
 
 .offer-question-container {
-  width: 590px;
+  padding: 100px 300px;
   min-height: 215px;
-  margin: 100px 300px;
+  margin: 0;
   text-align: center;
 }
 
 .offer-question {
   margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
   width: 300px;
   text-align: center;
   text-transform: uppercase;
@@ -420,6 +422,9 @@ height: 390px;
 }
 
 .offer-date {
+  margin: 0 auto;
+  margin-bottom: 55px;
+  padding: 0;
   width: 590px;
   text-align: center;
   font-size: 22px;
@@ -428,13 +433,12 @@ height: 390px;
 }
 
 .button-search {
+  margin: 0 auto;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 0 auto;
-
   border-radius: 4px;
   padding: 8px 50px;
-  width: 275;
+  width: 370;
   min-height: 36px;
 
   font-family: "PT Sans", sans-serif;
@@ -447,13 +451,12 @@ height: 390px;
 }
 
 
-/* подпишитесь на рассылку */
+/* ПОДПИСКА */
+
 .subscribe-container {
+  margin: 0;
+  padding: 100px 250px;
   text-align: center;
-  width: 100%;
-  padding: 95px 250px;
-  min-height: 215px;
-  margin: 0 auto;
   color: #ffffff;
   background-color: #000000;
   background-image: url(../images/footer/subscribe-background.jpg);
@@ -462,6 +465,8 @@ height: 390px;
 .subscribe-heading {
   width: 400px;
   margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -470,6 +475,7 @@ height: 390px;
 .subscribe-slogan {
   width: 475px;
   margin: 0 auto;
+  margin-bottom: 55px;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
@@ -505,7 +511,6 @@ height: 390px;
 .subscribe-input {
   width: 450px;
   border-radius: 4px 0 0 4px;
-  margin-right: 0;
   border: none;
   background-color: #f2f2f2;
   font-family: PT Sans;
@@ -516,14 +521,14 @@ height: 390px;
   color: #000000;
 }
 
-/* футер */
+/* ФУТЕР */
 
 .page-footer,
 .catalog-footer {
   display: flex;
   justify-content: space-between;
   width: 1200px;
-  margin: 0 auto;
+  padding: 35px 70px;
 }
 
 .socials-list {
@@ -553,7 +558,7 @@ height: 390px;
 
 /* каталог */
 
-.catalog-main-container{
+.catalog-main-container {
   flex-grow: 1;
   margin: 0 auto;
 }
@@ -569,7 +574,7 @@ height: 390px;
   background-color: #000000;
 }
 
-.heading-catalog{
+.heading-catalog {
   width: 500px;
   font-size: 60px;
   font-weight: 700;
@@ -640,6 +645,7 @@ height: 390px;
   margin: 0;
   padding: 0;
 }
+
 .catalog-filter-group {
   margin: 0;
   padding: 0;
@@ -699,7 +705,7 @@ height: 390px;
 /* панель под фильтром */
 
 .searching-results {
-  padding: 50px 70px 60px;
+  padding: 50px 70px;
   margin: 0;
 }
 
@@ -707,7 +713,7 @@ height: 390px;
   display: flex;
   flex-wrap: nowrap;
   width: 1060px;
-  margin: 0 auto 40px;
+  margin: 0 0 50px 0;
   padding: 0;
 
 }
@@ -758,7 +764,8 @@ height: 390px;
 
 .product-card-container {
   width: 1060px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   margin-bottom: 80px;
 }
 
@@ -769,7 +776,8 @@ height: 390px;
 }
 
 .product-card-item {
-  margin: 0 20px 0 0;
+  /* Должно быть с маргинами, но не влазит
+  margin: 0 20px 0 0; */
   padding: 20px;
   width: 340px;
 }
@@ -808,11 +816,6 @@ height: 390px;
   text-transform: uppercase;
 }
 
-
-
-
-
-
 .button-favorites {
   padding: 8px 50px;
   border-radius: 4px;
@@ -847,6 +850,7 @@ height: 390px;
   display: flex;
   list-style: none;
   margin: o;
+  padding: 0;
 }
 
 .pagination-item {
@@ -897,7 +901,7 @@ height: 390px;
 
 .subscription-catalog {
   text-align: center;
-  padding: 100px 260px;
+  padding: 100px 250px;
 }
 
 .subscribe-heading-catalog {
@@ -921,8 +925,6 @@ height: 390px;
   color: #000000;
   background-color: #f2f2f2;
 }
-
-
 
 .subscribe-button-catalog {
   text-transform: uppercase;
@@ -954,30 +956,5 @@ height: 390px;
 .subscribe-slogan-catalog {
   width: 475px;
   margin: 0 auto 50px;
-  padding: 0;
-}
-
-
-.product-card-container {
-  display: flex;
-  width: 1060px;
-  margin: 0 auto;
-  padding: 0;
-
-
-}
-
-.product-card {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.product-card-item {
-  width: 340px;
-  margin: 0;
   padding: 0;
 }
