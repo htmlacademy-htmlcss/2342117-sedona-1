@@ -64,23 +64,34 @@ body {
   color: #333333;
 }
 
+.page-header {
+  margin: 0;
+  padding: 0 70px;
+}
+
+.logo-link {
+  width: 140px;
+  height: 70px;
+  margin: 0;
+  margin-right: 30px;
+  padding: 0;
+}
+
 /* НАВИГАЦИЯ */
 
 .navigation {
   display: flex;
-  margin: o auto;
+  margin: o;
   padding: 0;
 }
 
 .main-nav {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
   list-style: none;
-  width: 440px;
+  width: 550px;
   margin: 0;
-  padding: 20px 15px;
+  margin-right: auto;
+  padding: 0;
 }
 
 .main-nav-link {
@@ -91,9 +102,9 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
+  width: 120px;
   margin: 0;
-  padding: 0;
-  background-color: #ffffff;
+  padding: 20px 15px;
   color: #333333;
 }
 
@@ -101,24 +112,32 @@ body {
 
 .nav-user {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  align-items: center;
   list-style: none;
   text-decoration: none;
-  width: 300px;
-  margin-left: auto;
+  min-width: 45px;
+  width: 350px;
+  margin: 0;
   padding: 0;
 }
 
 .nav-user-link {
   display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  width: 20px;
+  padding: 20px;
+  background-color: #82B3D3;
 }
 
+/* не получается убрать отступ справа от кнопки */
 .nav-user-link-button {
   text-transform: uppercase;
   text-decoration: none;
-
   border-radius: 4px;
+  margin: 0;
+  margin-left: 20px;
   padding: 8px 50px;
   width: 160px;
   min-height: 36px;
@@ -128,7 +147,6 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  text-align: center;
 
   color: #ffffff;
   background: #756157;
@@ -147,8 +165,8 @@ body {
 }
 
 .advantage-container {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .slogan {
@@ -175,6 +193,7 @@ padding: 0;
 * {
   outline: 1px solid red !important;
 }
+
 /* ПРЕИМУЩЕСТВА */
 
 /* ul */
@@ -186,7 +205,6 @@ padding: 0;
   margin: 0;
   padding: 0;
 }
-
 
 /* li большой */
 .advantage-item-wide {
@@ -203,7 +221,7 @@ padding: 0;
   min-height: 385px;
   padding: 100px 85px;
   margin: 0;
-  background-color:#82B3D3;
+  background-color: #82B3D3;
   color: #ffffff;
 }
 
@@ -213,8 +231,6 @@ padding: 0;
   height: 100%;
   /* изображение не реагирует */
 }
-
-
 
 /* li маленький */
 .advantage-item {
@@ -244,18 +260,7 @@ padding: 0;
   line-height: 21px;
 }
 
-
-
-
-
 /* ПРИЕЗЖАЙТЕ В СЕДОНУ */
-
-
-
-/*
-.invitation {
-  text-align: center;
-} */
 
 .invitation-title-description {
   padding: 65px;
