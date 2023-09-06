@@ -74,6 +74,7 @@ body {
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
@@ -83,6 +84,7 @@ body {
 }
 
 .main-nav-link {
+  display: block;
   text-align: center;
   text-transform: capitalize;
   text-decoration: none;
@@ -99,13 +101,17 @@ body {
 
 .nav-user {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-start;
   list-style: none;
   text-decoration: none;
   width: 300px;
   margin-left: auto;
   padding: 0;
+}
+
+.nav-user-link {
+  display: block;
 }
 
 .nav-user-link-button {
@@ -130,109 +136,100 @@ body {
 
 /* main */
 
-.background-picture {
+.greetings {
+  display: grid;
+  place-content: center;
   background-image: url("../images/sedona/index-background.jpg");
-  height: 485px;
   background-size: 100% auto;
-  text-align: center;
   background-repeat: no-repeat;
   background-color: #000000;
+  margin-bottom: 70px;
 }
 
-.container-sedona {
-  padding: 70px 0;
+.advantage-container {
+margin: 0;
+padding: 0;
 }
 
 .slogan {
   width: 620px;
-  margin: 0 auto;
-  margin-top: 25px;
+  margin: 0 auto 25px;
   padding: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
   color: #000000;
 }
 
 .causes {
-  width: 651px;
-  margin: 0 auto;
-  padding: 0;
+  width: 700px;
+  margin: 0 auto 70px;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
+  text-align: center;
 }
 
+* {
+  outline: 1px solid red !important;
+}
 /* ПРЕИМУЩЕСТВА */
 
-.advantage {
-  width: 1200;
-}
-
+/* ul */
 .advantage-list {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
-
   margin: 0;
   padding: 0;
 }
 
-.advantage-item-first {
-  margin-right: 0;
-  width: 400px;
-  height: 385px;
-  padding: 103px 85px;
-  background: #82B3D3;
-}
 
-.advantage-title-first {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
+/* li большой */
+.advantage-item-wide {
+  min-height: 400px;
+  display: flex;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
 }
 
-.about-advantage-first {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
+/* див для текста */
+.advantage-item-container-wide {
+  width: 400px;
+  min-height: 385px;
+  padding: 100px 85px;
+  margin: 0;
+  background-color:#82B3D3;
   color: #ffffff;
 }
 
-.advantage-item-second {
+.advantage-picture {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* изображение не реагирует */
+}
+
+
+
+/* li маленький */
+.advantage-item {
   width: 400px;
-  height: 385px;
-  padding: 103px 85px;
-  background-color: rgba(131, 179, 211, 0.12);
+  min-height: 385px;
+  padding: 100px 85px;
 }
 
-.advantage-title-second {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  color: #000000;
-}
-
-.about-advantage-second {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.advantage-item-third {
-  width: 400px;
-  height: 385px;
-  padding: 103px 85px;
+/* средний */
+.advantage-item:nth-child(3) {
   background: rgba(131, 179, 211, 0.20);
 }
 
-.advantage-title-third {
+/* h3 */
+.advantage-title {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
@@ -240,75 +237,35 @@ body {
   color: #000000;
 }
 
-.about-advantage-third {
+/* p */
+.about-advantage {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
 }
 
-.advantage-item-fourth {
-  width: 400px;
-  height: 385px;
-  padding: 103px 85px;
-  background-color: rgba(131, 179, 211, 0.12);
-}
 
-.advantage-title-fourth {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  color: #000000;
-}
 
-.about-advantage-fourth {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-}
 
-.advantage-item-fifth {
-  width: 400px;
-  height: 385px;
-  padding: 103px 85px;
-  background: #82B3D3;
-}
-
-.advantage-title-fifth {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  color: #ffffff;
-}
-
-.about-advantage-fifth {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #ffffff;
-}
-
-.advantage-picture-first {
-  margin-left: auto;
-  width: 800px;
-  height: 390px;
-}
 
 /* ПРИЕЗЖАЙТЕ В СЕДОНУ */
 
+
+
+/*
 .invitation {
   text-align: center;
-}
+} */
 
 .invitation-title-description {
-  width: 1200px;
-  padding: 70px 0;
+  padding: 65px;
+  min-height: 250px;
 }
 
 .invitation-title {
   width: 500px;
   margin: 0 auto;
+  margin-bottom: 20px;
   padding: 0;
   font-size: 30px;
   font-weight: 700;
@@ -326,24 +283,26 @@ body {
   line-height: 26px;
 }
 
+
 /* РЕКОМЕНДАЦИИ */
+
 
 .recommendation-list {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-.recommendation-item-first {
+.recommendation-item {
   width: 400px;
   height: 385px;
   padding: 80px 85px;
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: rgba(130, 180, 211, 0.12);
 }
 
-.recommendation-title-first {
+.recommendation-title {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
@@ -351,53 +310,18 @@ body {
   color: #000000;
 }
 
-.about-recommendation-first {
+.about-recommendation {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
 }
 
-.recommendation-item-second {
+.recommendation-item-secondery {
   width: 400px;
   height: 385px;
   padding: 80px 85px;
-  background: #ffffff;
 }
 
-.recommendation-title-second {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  color: #000000;
-}
-
-.about-recommendation-second {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.recommendation-item-third {
-  width: 400px;
-  height: 385px;
-  padding: 80px 85px;
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.recommendation-title-third {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  color: #000000;
-}
-
-.about-recommendation-third {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-}
 
 /* ОФЕР */
 
@@ -776,11 +700,14 @@ body {
 }
 
 .product-card-item {
-  /* Должно быть с маргинами, но не влазит
-  margin: 0 20px 0 0; */
+  /* margin: 0 20px 0 0; */
   padding: 20px;
   width: 340px;
 }
+
+/* .product-card-item:nth-child(3) {
+margin: 0;
+} */
 
 .product-card-link {
   text-decoration: none;
