@@ -27,6 +27,11 @@
   overflow: hidden;
 }
 
+/* 
+* {
+  outline: 1px solid red !important;
+} */
+
 *,
 *::before,
 *::after {
@@ -159,9 +164,15 @@ body {
   place-content: center;
   background-image: url("../images/sedona/index-background.jpg");
   background-size: 100% auto;
+
   background-repeat: no-repeat;
   background-color: #000000;
   margin-bottom: 70px;
+}
+
+.greetings-image {
+  background-size: 1200px 485px;
+  margin: 50px auto 80px;
 }
 
 .advantage-container {
@@ -190,13 +201,9 @@ body {
   text-align: center;
 }
 
-* {
-  outline: 1px solid red !important;
-}
 
 /* ПРЕИМУЩЕСТВА */
 
-/* ul */
 .advantage-list {
   display: flex;
   flex-wrap: wrap;
@@ -206,7 +213,6 @@ body {
   padding: 0;
 }
 
-/* li большой */
 .advantage-item-wide {
   min-height: 400px;
   display: flex;
@@ -215,7 +221,6 @@ body {
   color: #ffffff;
 }
 
-/* див для текста */
 .advantage-item-container-wide {
   width: 400px;
   min-height: 385px;
@@ -232,19 +237,16 @@ body {
   /* изображение не реагирует */
 }
 
-/* li маленький */
 .advantage-item {
   width: 400px;
   min-height: 385px;
   padding: 100px 85px;
 }
 
-/* средний */
 .advantage-item:nth-child(3) {
   background: rgba(131, 179, 211, 0.20);
 }
 
-/* h3 */
 .advantage-title {
   text-transform: uppercase;
   font-size: 24px;
@@ -253,7 +255,6 @@ body {
   color: #000000;
 }
 
-/* p */
 .about-advantage {
   font-size: 18px;
   font-weight: 400;
@@ -288,9 +289,7 @@ body {
   line-height: 26px;
 }
 
-
 /* РЕКОМЕНДАЦИИ */
-
 
 .recommendation-list {
   display: flex;
@@ -326,7 +325,6 @@ body {
   height: 385px;
   padding: 80px 85px;
 }
-
 
 /* ОФЕР */
 
@@ -378,7 +376,6 @@ body {
   color: #ffffff;
   background-color: #756157;
 }
-
 
 /* ПОДПИСКА */
 
@@ -480,11 +477,6 @@ body {
 .websitе-htmlacademy {
   width: 115px;
 }
-
-
-
-
-
 
 /* каталог */
 
@@ -603,6 +595,7 @@ body {
   width: 190;
   min-height: 36px;
   margin: 0;
+  margin-bottom: 30px;
   padding: 8px 50px;
   border-radius: 4px;
   border: none;
@@ -617,7 +610,6 @@ body {
 }
 
 .button-reset {
-  /* background: url("../images/search-bar/background-image.png"); */
   width: 190px;
   padding: 8px 50px;
   border: 4px;
@@ -641,11 +633,12 @@ body {
 
 .select-control-container {
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
   width: 1060px;
+  min-height: 50px;
   margin: 0 0 50px 0;
   padding: 0;
-
 }
 
 .caption-found {
@@ -659,8 +652,6 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
-
-
 
 .select-control {
   width: 290px;
@@ -679,6 +670,8 @@ body {
 
 
 .option {
+  width: 50px;
+  height: 50px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -711,9 +704,6 @@ body {
   width: 340px;
 }
 
-/* .product-card-item:nth-child(3) {
-margin: 0;
-} */
 
 .product-card-link {
   text-decoration: none;
@@ -787,17 +777,21 @@ margin: 0;
 }
 
 .pagination-item {
+  align-items: center;
+  display: flex;
   width: 60px;
   height: 60px;
-  padding: 12px;
+  margin-right: 8px;
   border-radius: 4px;
   background-color: #82b3d3;
 }
 
+.pagination-item:last-child {
+  margin-right: o;
+}
+
 .pagination-link {
-  width: 60px;
-  height: 60px;
-  padding: 15px;
+  padding: 12px 25px;
   text-decoration: none;
   text-align: center;
   font-size: 20px;
@@ -809,9 +803,11 @@ margin: 0;
 
 .pagination-item-first,
 .pagination-item-fifth {
+  display: flex;
+  align-items: center;
   width: 60px;
   height: 60px;
-  padding: 12px;
+  margin-right: 8px;
   border-radius: 4px;
   background-color: #f2f2f2;
 }
@@ -819,9 +815,7 @@ margin: 0;
 .pagination-link-first,
 .pagination-link-fifth {
   text-decoration: none;
-  width: 60px;
-  height: 60px;
-  padding: 12px;
+  padding: 12px 25px;
   text-align: center;
   font-size: 20px;
   font-weight: 700;
@@ -849,8 +843,8 @@ margin: 0;
 }
 
 .subscribe-form-catalog {
-  padding: 12px 20px;
-
+  display: flex;
+  width: 690px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -860,11 +854,13 @@ margin: 0;
 }
 
 .subscribe-button-catalog {
-  text-transform: uppercase;
+  width: 230px;
   padding: 8px 50px;
+  margin: 0;
   min-height: 36px;
   border: none;
 
+  text-transform: uppercase;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -875,13 +871,17 @@ margin: 0;
 }
 
 .subscribe-input-catalog {
+  width: 460px;
   border-radius: 4px 0 0 4px;
   border: none;
+  padding: 10px 20px;
+  margin: 0;
+  /* margin-right: auto; */
   background-color: #f2f2f2;
   font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 24px;
   color: #000000;
 }
