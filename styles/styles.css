@@ -234,8 +234,7 @@ body {
 }
 
 .advantage-picture {
-  display: block;
-  margin: 0;
+  object-fit: fill;
   padding: 0;
   height: 100%;
   /* изображение не реагирует */
