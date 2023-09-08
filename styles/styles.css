@@ -234,6 +234,7 @@ body {
 }
 
 .advantage-picture {
+  display: block;
   margin: 0;
   padding: 0;
   height: 100%;
