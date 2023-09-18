@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 
-/* 
+/*
 * {
   outline: 1px solid red !important;
 } */
@@ -105,6 +105,7 @@ body {
 }
 
 .main-nav-link {
+  position: relative;
   display: block;
   text-align: center;
   text-transform: capitalize;
@@ -120,8 +121,14 @@ body {
   cursor: pointer;
 }
 
-
-
+.main-link-home::before {
+  position: absolute;
+  content: "";
+  width: 67px;
+  height: 2px;
+  bottom: -1px;
+  background-color: #756257;
+}
 
 
 
@@ -138,7 +145,6 @@ body {
   padding: 0;
 }
 
-
 .nav-user-item {
   position: relative;
   min-width: 45px;
@@ -148,11 +154,13 @@ body {
 }
 
 .nav-user-item:nth-child(2) {
+  position: relative;
   margin-right: 20px;
+  top: 4px;
 }
 
 .nav-user-link {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: 0;
@@ -165,7 +173,6 @@ body {
   padding: 22px 12px;
 }
 
-
 .navigation-icon {
   position: absolute;
   left: 15px;
@@ -174,37 +181,11 @@ body {
   fill: #000000;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nav-user-link-button {
   position: relative;
   left: 0;
   right: 0;
-  top: 15px;
+  top: 14px;
   bottom: 0;
   margin: auto;
   list-style: none;
@@ -214,8 +195,8 @@ body {
   border-radius: 4px;
   border: none;
 
-  padding: 8px 35px;
-  width: 80px;
+  padding: 8px 37px;
+  width: 95px;
   min-height: 30px;
 
   font-family: "PT Sans", sans-serif;
@@ -229,24 +210,44 @@ body {
   cursor: pointer;
 }
 
-
+.dekoration-for-favorite {
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  top: -22px;
+  right: -10px;
+}
 
 
 /* main */
 
 .greetings {
+  position: relative ;
   display: grid;
   place-content: center;
   background-image: url("../images/sedona/index-background.jpg");
   background-size: 100% auto;
-
   background-repeat: no-repeat;
   background-color: #000000;
-  /* margin-bottom: 70px; */
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+  position: absolute ;
+  top: 430px;
 }
 
 .greetings-image {
-  background-size: 1200px 485px;
+  background-size: 1200px 470px;
   margin: 50px auto 80px;
 }
 
@@ -254,8 +255,6 @@ body {
   padding: 70px;
   margin-bottom: 20px;
 }
-
-
 
 .advantage-container {
   /* min-height: 1155px; */
@@ -287,13 +286,12 @@ body {
 
 /* ПРЕИМУЩЕСТВА */
 
+
 .advantage-container {
-  /* height: 1155px; */
 }
 
 .advantage-list {
   display: flex;
-  /* min-height: 1200px; */
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
@@ -302,8 +300,7 @@ body {
 }
 
 .advantage-item-wide {
-  /* min-height: 400px; */
-  height: 380px;
+  min-height: 385px;
   display: flex;
   margin: 0;
   padding: 0;
@@ -311,6 +308,7 @@ body {
 }
 
 .advantage-item-container-wide {
+  position: relative;
   width: 400px;
   min-height: 385px;
   padding: 100px 85px;
@@ -318,6 +316,8 @@ body {
   background-color: #82B3D3;
   color: #ffffff;
 }
+
+
 
 
 .advantage-title-wide {
@@ -329,26 +329,40 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  margin-bottom: 62px;
 }
 
 .about-advantage-wide {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
+}
+
+.advantage-title-wide::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 49%;
+  left: 50%;
+  margin-left: -30px;
+  background-color: rgba(255, 255, 255, 0.30);
 }
 
 .advantage-picture {
-  object-fit: fill;
-  padding: 0;
+  display: block;
   height: 100%;
 }
 
 .advantage-item {
+  position: relative;
   width: 400px;
   min-height: 385px;
   padding: 100px 85px;
   margin: 0;
-
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-item:nth-child(3) {
@@ -356,6 +370,8 @@ body {
 }
 
 .advantage-title {
+  position: relative;
+  top: 11px;
   width: 175px;
   margin: 0 auto;
   padding: 0;
@@ -365,9 +381,25 @@ body {
   font-weight: 700;
   line-height: 28px;
   color: #000000;
+  margin-bottom: 62px;
 }
 
+.advantage-title::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  left: 50%;
+  bottom: -33px;
+  margin-left: -30px;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+
+
 .about-advantage {
+  position: relative;
+  bottom: -11px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -413,15 +445,18 @@ body {
 }
 
 .recommendation-item {
+  position: relative;
   width: 400px;
   height: 385px;
   padding: 80px 85px;
+  margin: 0;
   background-color: rgba(130, 180, 211, 0.12);
 }
 
 .recommendation-title {
-  margin: 0 auto;
-  margin-bottom: 30px;
+  position: absolute;
+  left: 160px;
+  top: 155px;
   padding: 0;
   text-align: center;
   text-transform: uppercase;
@@ -430,23 +465,32 @@ body {
   line-height: 28px;
   color: #000000;
 }
+
+.recommendation-title:nth-child(3) {
+  /* не понимаю почему не срабатывает псевдокласс,
+  не могу воздействовать на заголовок в третьем item*/
+
+  left: 50px;
+  top: 155px;
+}
+
 .recommendation-item:nth-child(1) {
 background-image: url("../images/sedona/icon-housing.svg");
 background-repeat: no-repeat;
-background-position: 150px 50px;
-margin-bottom: 30px;
-
+background-position: 160px 75px;
 }
 
 .recommendation-item:nth-child(3) {
   background-image: url("../images/sedona/icon-souvenirs.svg");
   background-repeat: no-repeat;
-  background-position: 150px 50px;
-  margin-bottom: 30px;
-
+  background-position: 160px 75px;
   }
 
 .about-recommendation {
+  position: absolute;
+  bottom: 65px;
+  left: 115px;
+
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -454,22 +498,43 @@ margin-bottom: 30px;
 }
 
 .recommendation-item-secondery {
+  position: relative;
   width: 400px;
   height: 385px;
   padding: 80px 85px;
   background-image: url("../images/sedona/icon-food.svg");
   background-repeat: no-repeat;
-  background-position: 150px 50px;
-  margin-bottom: 30px;
+  background-position: 160px 75px;
+}
+
+.recommendation-title-secondary {
+  position: absolute;
+  transform: translate(95px, 100px);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0;
+}
+
+.about-recommendation-secondary {
+  position: absolute;
+  bottom: 65px;
+  left: 85px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 
 /* ОФЕР */
 
 .offer-question-container {
-  padding: 100px 300px;
-  min-height: 215px;
-  margin: 0;
+  padding: 96px 300px;
+  min-height: 400px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -504,7 +569,7 @@ margin-bottom: 30px;
   text-decoration: none;
   border-radius: 4px;
   padding: 8px 50px;
-  width: 370;
+  width: 376px;
   min-height: 36px;
 
   font-family: "PT Sans", sans-serif;
@@ -520,9 +585,11 @@ margin-bottom: 30px;
 
 /* ПОДПИСКА */
 
+
+
 .subscribe-container {
   margin: 0;
-  padding: 100px 250px;
+  padding: 95px 258px 104px;
   text-align: center;
   color: #ffffff;
   background-color: #000000;
@@ -530,7 +597,7 @@ margin-bottom: 30px;
 }
 
 .subscribe-heading {
-  width: 400px;
+  width: 405px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0;
@@ -567,10 +634,10 @@ margin-bottom: 30px;
   cursor: pointer;
 
 }
-
+/* 690 */
 .subscribe-form {
   display: flex;
-  width: 690px;
+  width: 683px;
   padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -600,17 +667,45 @@ margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   width: 1200px;
-  padding: 35px 70px;
+  min-height: 120px;
+  margin: 0;
+  padding: 45px 70px 30px;
 }
 
 .socials-list {
-  width: 150px;
+  display: flex;
   list-style: none;
   cursor: pointer;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+
+}
+
+.social-link {
+  display: block;
+  width: 47px;
+  min-height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-vk {
+  background-image: url("../images/footer/icon-vk.svg");
+}
+
+.social-tg {
+  background-image: url("../images/footer/icon-telegram.svg");
+}
+
+.social-youtube {
+  background-image: url("../images/footer/icon-youtube.svg");
 }
 
 .footer-phone {
-  width: 330px;
+  width: 340px;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -618,11 +713,6 @@ margin-bottom: 30px;
   font-weight: 400;
   line-height: 40px;
   color: #000000;
-}
-.socials-link {
-  display: block;
-  width: 47px;
-  min-height: 40px;
 }
 
 .websitе-htmlacademy {
