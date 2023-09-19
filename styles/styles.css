@@ -27,8 +27,8 @@
   overflow: hidden;
 }
 
-/*
-* {
+
+/* * {
   outline: 1px solid red !important;
 } */
 
@@ -63,6 +63,8 @@ body {
 }
 
 .page-main-container {
+  position: relative;
+  top: -6px;
   flex-grow: 1;
   margin: 0 auto;
   background-color: #ffffff;
@@ -121,6 +123,11 @@ body {
   cursor: pointer;
 }
 
+.main-nav-item:nth-child(3) {
+  position: relative;
+  left: 4px;
+}
+
 .main-link-home::before {
   position: absolute;
   content: "";
@@ -128,6 +135,7 @@ body {
   height: 2px;
   bottom: -1px;
   background-color: #756257;
+  order: 2;
 }
 
 
@@ -173,41 +181,24 @@ body {
   padding: 22px 12px;
 }
 
-.navigation-icon {
+.nav-link-search {
+  background-image: url("../images/header/search.svg");
+  background-repeat: no-repeat;
   position: absolute;
-  left: 15px;
-  top: 20px;
+  left: 10px;
+  top: 21px;
   margin: auto;
   fill: #000000;
 }
 
-.nav-user-link-button {
-  position: relative;
-  left: 0;
-  right: 0;
-  top: 14px;
-  bottom: 0;
+.nav-link-favorite {
+  background-image: url("../images/header/favorites.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 8px;
+  top: 18px;
   margin: auto;
-  list-style: none;
-  align-items: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 4px;
-  border: none;
-
-  padding: 8px 37px;
-  width: 95px;
-  min-height: 30px;
-
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-
-  color: #ffffff;
-  background: #756157;
-  cursor: pointer;
+  fill: #000000;
 }
 
 .dekoration-for-favorite {
@@ -222,15 +213,44 @@ body {
   color: #ffffff;
   border-radius: 50%;
   background-color: #7DB54F;
-  top: -22px;
-  right: -10px;
+  top: -43px;
+  right: 4px;
+}
+
+.nav-user-link-button {
+  position: relative;
+  left: px;
+  right: 0;
+  top: 15px;
+  bottom: 0;
+  margin: auto;
+  list-style: none;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+
+  padding: 8px 35px;
+  width: 95px;
+  min-height: 30px;
+
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+
+  color: #ffffff;
+  background: #756157;
+  cursor: pointer;
 }
 
 
 /* main */
 
 .greetings {
-  position: relative ;
+
   display: grid;
   place-content: center;
   background-image: url("../images/sedona/index-background.jpg");
@@ -241,10 +261,14 @@ body {
   padding: 0;
 }
 
-.divider {
-  position: absolute ;
+/* .greetings-divider {
+  background-image: url("../images/sedona/divider.svg");
+  order: 1;
+  position: relative ;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   top: 430px;
-}
+} */
 
 .greetings-image {
   background-size: 1200px 470px;
@@ -254,6 +278,8 @@ body {
 .greetings-text {
   padding: 70px;
   margin-bottom: 20px;
+  /* background-image: url("../images/sedona/divider.svg");
+  background-repeat: no-repeat; */
 }
 
 .advantage-container {
@@ -287,8 +313,7 @@ body {
 /* ПРЕИМУЩЕСТВА */
 
 
-.advantage-container {
-}
+
 
 .advantage-list {
   display: flex;
@@ -329,7 +354,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  margin-bottom: 62px;
+  margin-bottom: 63px;
 }
 
 .about-advantage-wide {
@@ -403,13 +428,14 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
 }
 
 /* ПРИЕЗЖАЙТЕ В СЕДОНУ */
 
 .invitation-title-description {
-  padding: 65px;
-  min-height: 250px;
+  padding: 64px;
+  min-height: 246px;
 }
 
 .invitation-title {
@@ -426,8 +452,8 @@ body {
 }
 
 .description {
-  width: 490px;
-  margin: 0 auto;
+  text-align: center;
+  margin: 0;
   padding: 0;
   font-size: 22px;
   font-weight: 400;
@@ -454,9 +480,8 @@ body {
 }
 
 .recommendation-title {
-  position: absolute;
-  left: 160px;
-  top: 155px;
+  position: relative;
+  top: 80px;
   padding: 0;
   text-align: center;
   text-transform: uppercase;
@@ -466,30 +491,23 @@ body {
   color: #000000;
 }
 
-.recommendation-title:nth-child(3) {
-  /* не понимаю почему не срабатывает псевдокласс,
-  не могу воздействовать на заголовок в третьем item*/
-
-  left: 50px;
-  top: 155px;
-}
 
 .recommendation-item:nth-child(1) {
-background-image: url("../images/sedona/icon-housing.svg");
-background-repeat: no-repeat;
-background-position: 160px 75px;
+  background-image: url("../images/sedona/icon-housing.svg");
+  background-repeat: no-repeat;
+  background-position: 161px 82px;
 }
 
 .recommendation-item:nth-child(3) {
   background-image: url("../images/sedona/icon-souvenirs.svg");
   background-repeat: no-repeat;
-  background-position: 160px 75px;
-  }
+  background-position: 162px 80px;
+}
 
 .about-recommendation {
-  position: absolute;
-  bottom: 65px;
-  left: 115px;
+  position: relative;
+  top: 85px;
+  text-align: center;
 
   text-align: center;
   font-size: 18px;
@@ -504,12 +522,12 @@ background-position: 160px 75px;
   padding: 80px 85px;
   background-image: url("../images/sedona/icon-food.svg");
   background-repeat: no-repeat;
-  background-position: 160px 75px;
+  background-position: 162px 82px;
 }
 
 .recommendation-title-secondary {
-  position: absolute;
-  transform: translate(95px, 100px);
+  position: relative;
+  top: 103px;
   text-align: center;
   text-transform: uppercase;
   font-size: 24px;
@@ -519,9 +537,8 @@ background-position: 160px 75px;
 }
 
 .about-recommendation-secondary {
-  position: absolute;
-  bottom: 65px;
-  left: 85px;
+  position: relative;
+  top: 115px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -542,7 +559,6 @@ background-position: 160px 75px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0;
-  width: 300px;
   text-align: center;
   text-transform: uppercase;
   font-size: 30px;
@@ -588,38 +604,74 @@ background-position: 160px 75px;
 
 
 .subscribe-container {
+  min-height: 414px;
   margin: 0;
   padding: 95px 258px 104px;
   text-align: center;
   color: #ffffff;
   background-color: #000000;
   background-image: url(../images/footer/subscribe-background.jpg);
+  background-size: 100% auto;
+  background-color: #000000;
 }
 
-.subscribe-heading {
+.subscribe-heading,
+.subscribe-heading-catalog {
   width: 405px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   padding: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-
 }
 
-.subscribe-slogan {
+.subscribe-slogan,
+.subscribe-slogan-catalog {
   width: 475px;
-  margin: 0 auto;
-  margin-bottom: 55px;
+  margin: 0 auto 55px;
+  padding: 0;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
 }
 
-.subscribe-button {
+.subscribe-form,
+.subscribe-form-catalog {
+  display: flex;
+  border-radius: 4px 0 0 4px;
+  width: 684px;
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.subscribe-input,
+.subscribe-input-catalog {
+  width: 455px;
+  border-radius: 4px 0 0 4px;
+  margin: 0;
+  padding: 12px 20px;
+  border: none;
+  background-color: #f2f2f2;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+}
+
+.subscribe-button,
+.subscribe-button-catalog {
   margin: o;
-  width: 230px;
+  width: 232px;
   text-transform: uppercase;
   padding: 8px 50px;
   border-radius: 0 4px 4px 0;
@@ -634,31 +686,7 @@ background-position: 160px 75px;
   cursor: pointer;
 
 }
-/* 690 */
-.subscribe-form {
-  display: flex;
-  width: 683px;
-  padding: 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #000000;
-  background-color: #f2f2f2;
-}
 
-.subscribe-input {
-  width: 460px;
-  border-radius: 4px 0 0 4px;
-  border: none;
-  background-color: #f2f2f2;
-  font-family: PT Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  color: #000000;
-}
 
 /* ФУТЕР */
 
@@ -1028,7 +1056,7 @@ background-position: 160px 75px;
 }
 
 .product-card-button:last-child {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .button-favorites,
@@ -1138,67 +1166,10 @@ margin-bottom: 0;
 
 .subscription-catalog {
   text-align: center;
-  padding: 100px 250px;
-}
-
-.subscribe-heading-catalog {
-  width: 400px;
-  margin: 0 auto 20px;
-  padding: 0;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.subscribe-form-catalog {
-  display: flex;
-  width: 690px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #000000;
-  background-color: #f2f2f2;
-}
-
-.subscribe-button-catalog {
-  display: inline-block;
-  width: 230px;
-  padding: 8px 50px;
   margin: 0;
-  min-height: 36px;
-  border: none;
-
-  text-transform: uppercase;
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-
-  color: #ffffff;
-  background: #82B3D3;
-  cursor: pointer;
-}
-
-.subscribe-input-catalog {
-  width: 460px;
-  border-radius: 4px 0 0 4px;
-  border: none;
-  padding: 10px 20px;
-  margin: 0;
-  background-color: #f2f2f2;
-  font-family: PT Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 450;
-  line-height: 24px;
+  padding: 95px 258px 104px;
   color: #000000;
 }
 
-.subscribe-slogan-catalog {
-  width: 475px;
-  margin: 0 auto 50px;
-  padding: 0;
-}
+/* остальные классы
+объеденил с главной */
