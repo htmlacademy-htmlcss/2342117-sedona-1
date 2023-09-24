@@ -62,9 +62,10 @@ body {
   color: #333333;
 }
 
-.page-shadow {
-  box-shadow: 40px 0 #f2f2f2,
-  -40px 0 #f2f2f2;
+.page-shadow,
+.page-catalog-shadow {
+  box-shadow: 40px 0 0 -1px  #f2f2f2,
+  -40px 0 0 -1px  #f2f2f2;
 }
 
 .page-main-container {
@@ -139,12 +140,20 @@ body {
   width: 67px;
   height: 2px;
   bottom: -1px;
-
   background-color: #756257;
-
 }
 
+.main-nav-link:hover {
+  background-color: #f2f2f2;
+}
 
+.main-nav-link:focus {
+  background-color: #f2f2f2;
+}
+
+.main-nav-link:active {
+  background-color: #E6E6E6;
+}
 
 /* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
 
@@ -153,7 +162,6 @@ body {
   flex-wrap: wrap;
   list-style: none;
   align-items: center;
-  /* align-content: center; */
   text-decoration: none;
   min-width: 270px;
   margin: 0;
@@ -172,17 +180,26 @@ body {
   margin-right: 20px;
 }
 
-
-
 .nav-user-link {
   position: relative;
-  /* display: block; */
   text-align: center;
   text-decoration: none;
   margin: 0;
   width: 45px;
   height: 65px;
   padding: 22px 12px;
+}
+
+.nav-user-link:hover {
+  background-color: #f2f2f2;
+}
+
+.nav-user-link:focus {
+  background-color: #f2f2f2;
+}
+
+.nav-user-link:active {
+  background-color: #E6E6E6;
 }
 
 .nav-link-search {
@@ -251,47 +268,31 @@ body {
   cursor: pointer;
 }
 
-.nav-user-item:nth-child(3):hover {
-background-color: #873106;}
+.nav-user-link-button:hover {
+  background-color: #615048;
+}
+
+.nav-user-link-button:focus {
+  background-color: #615048;
+}
+
+.nav-user-link-button:focus {
+  background-color: #756157;
+}
 
 /* main */
 
 .greetings {
   display: grid;
   place-content: center;
-  background-image: url("../images/sedona/index-background.jpg");
-  /* url("../images/sedona/street-sedona.jpg"); */
+  background-image: url("../images/sedona/divider.svg"),
+  url("../images/sedona/index-background.jpg");
+  background-position: bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #000000;
   margin: 0;
   padding: 0;
-}
-
-
-
-
-
-
-/*
-.greetings::after {
-  position: relative;
-  top: 30px;
-  z-index: 1;
-  background-image: url("../images/sedona/street-sedona.jpg");
-
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-color: #000000;
-
-} */
-
-.greetings-divider {
-  position: relative;
-  background-image: url("../images/sedona/divider.svg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  top: -56px;
 }
 
 .greetings-image {
@@ -300,14 +301,13 @@ background-color: #873106;}
 }
 
 .greetings-text {
-
-  padding: 128px 40px 12px;
+  padding: 70px 40px;
   margin-bottom: 20px;
 }
 
 .slogan {
   width: 620px;
-  margin: 0 auto 25px;
+  margin: 0 auto 26px;
   padding: 0;
   font-size: 30px;
   font-weight: 700;
@@ -331,11 +331,9 @@ background-color: #873106;}
 
 
 .advantage-container {
-  /* min-height: 1155px; */
   margin: 0;
   padding: 0;
 }
-
 
 .advantage-list {
   display: flex;
@@ -363,9 +361,6 @@ background-color: #873106;}
   background-color: #82B3D3;
   color: #ffffff;
 }
-
-
-
 
 .advantage-title-wide {
   text-align: center;
@@ -434,14 +429,10 @@ background-color: #873106;}
   background-color: rgba(0, 0, 0, 0.30);
 }
 
-
-
 .about-advantage {
-  /* bottom: -11px; */
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
-  /* margin: 0; */
 }
 
 /* ПРИЕЗЖАЙТЕ В СЕДОНУ */
@@ -486,14 +477,12 @@ background-color: #873106;}
 .recommendation-item {
   position: relative;
   width: 400px;
-  height: 385px;
-  padding: 159px 85px;
-  /* margin: 0; */
+  min-height: 385px;
+  padding: 159px 85px 0;
   background-color: rgba(130, 180, 211, 0.12);
 }
 
 .recommendation-title {
-  /* padding: 0; */
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -517,8 +506,6 @@ background-color: #873106;}
 }
 
 .about-recommendation {
-  /* position: relative; */
-  /* top: 85px; */
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -528,16 +515,14 @@ background-color: #873106;}
 .recommendation-item-secondery {
   position: relative;
   width: 400px;
-  height: 385px;
-  padding: 159px 85px;
+  min-height: 385px;
+  padding: 159px 85px 0;
   background-image: url("../images/sedona/icon-food.svg");
   background-repeat: no-repeat;
   background-position: 162px 82px;
 }
 
 .recommendation-title-secondary {
-  /* position: relative;
-  top: 103px; */
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -547,8 +532,6 @@ background-color: #873106;}
 }
 
 .about-recommendation-secondary {
-  /* position: relative; */
-  /* top: 115px; */
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -609,8 +592,20 @@ background-color: #873106;}
 
 }
 
-/* ПОДПИСКА */
+.button-search:hover {
+  background-color: #615048;
+}
 
+.button-search:focus {
+  background-color: #615048;
+}
+
+.button-search:focus {
+  background-color: #756157;
+}
+
+
+/* ПОДПИСКА */
 
 
 .subscribe-container {
@@ -622,7 +617,6 @@ background-color: #873106;}
   background-color: #000000;
   background-image: url(../images/footer/subscribe-background.jpg);
   background-size: 100% auto;
-  background-color: #000000;
 }
 
 .subscribe-heading,
@@ -695,9 +689,22 @@ background-color: #873106;}
   color: #ffffff;
   background: #82B3D3;
   cursor: pointer;
-
 }
 
+.subscribe-button:hover,
+.subscribe-button-catalog:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-button:active,
+.subscribe-button-catalog:active {
+  background-color: #68A2CA;
+}
+
+.subscribe-button:focus,
+.subscribe-button-catalog:focus {
+  background-color: #82B3D3;
+}
 
 /* ФУТЕР */
 
@@ -724,24 +731,29 @@ background-color: #873106;}
 }
 
 .social-link {
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   width: 47px;
   min-height: 40px;
   background-repeat: no-repeat;
   background-position: center;
+  color: #83B3D3;
 }
 
-.social-vk {
-  background-image: url("../images/footer/icon-vk.svg");
+.social-link:hover {
+  color: #68A2CA;
 }
 
-.social-tg {
-  background-image: url("../images/footer/icon-telegram.svg");
+.social-link:focus {
+  color: #68A2CA;
 }
 
-.social-youtube {
-  background-image: url("../images/footer/icon-youtube.svg");
+.social-link:active {
+  color: #68A2CA4D;
 }
+
 
 .footer-phone {
   position: relative;
@@ -758,63 +770,179 @@ background-color: #873106;}
   color: #000000;
 }
 
+.footer-phone:hover {
+  color: #756157;
+}
+
+.footer-phone:focus {
+  color: #756157;
+}
+
+.footer-phone:active {
+  color: #7561574D;
+}
+
+
 .websitе-htmlacademy {
   position: relative;
   left: -1px;
   top: 3px;
   display: block;
   width: 115px;
+  color: #000000;
   cursor: pointer;
-
 }
 
+.websitе-htmlacademy:hover {
+  color: #756157;
+}
+
+.websitе-htmlacademy:focus {
+  color: #756157;
+}
+
+.websitе-htmlacademy:active {
+  color: #7561574D;
+}
+
+
+
+
+
+
+
+
 /* каталог */
+
+.catalog-link-home::after {
+  position: absolute;
+  content: "";
+  width: 93px;
+  height: 2px;
+  bottom: -1px;
+  left: 15px;
+  background-color: #756257;
+
+}
 
 .catalog-main-container {
   flex-grow: 1;
   margin: 0 auto;
+  position: relative;
+  top: -6px;
 }
 
 /* фильтр */
 
+
+
 .catalog-products-filter {
+  position: relative;
   padding: 35px 70px 70px 70px;
   background-image: url("../images/search-bar/background-image-catalog.png");
   width: 100%;
-  height: 400px;
+  height: 415px;
+  /* background-size: 412px 1200px ; */
+  /* min-height: 412px; */
   background-repeat: no-repeat;
   background-color: #000000;
+  /* background-size: contain; */
+  /* background-position: bottom; */
 }
 
 .heading-catalog {
-  width: 500px;
+  min-width: 500px;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
   color: #ffffff;
+  margin: 0;
+  margin-bottom: 4px;
+  padding-bottom: 0;
 }
 
 .breadcrumbs {
   display: flex;
-  width: 115px;
-  list-style: none;
-  margin: 0;
+  flex-wrap: wrap;
+  min-width: 115px;
+  list-style-type: none;
+  margin: 0 0 39px;
+  padding: 0;
+  color: #ffffff;
+}
+
+.breadcrumbs-item{
+  display: flex;
+  position: relative;
+  margin-right: 8px;
   padding: 0;
 }
 
+
+.breadcrumbs-item:first-child::after {
+  content: "";
+  background-image: url(../images/search-bar/arrow-breadcrumbs.svg);
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  top: 9px;
+  left: 23px;
+}
+
+.breadcrumbs-link-home {
+  position: relative;
+  top:
+  width: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.breadcrumbs-link-home:hover {
+  color: #ffffff99;
+}
+
+.breadcrumbs-link-home:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link-home:active {
+  color: #ffffff4D;
+}
+
 .breadcrumbs-link-hotels {
+  position: relative;
+  top: 4px;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   color: #ffffff;
   cursor: pointer;
+  margin-right: 20px;
 }
+
+.breadcrumbs-link-hotels:hover {
+  color: #ffffff99;
+}
+
+.breadcrumbs-link-hotels:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link-hotels:active {
+  color: #ffffff4D;
+}
+
+
+
+
+
+
 
 /* фильтры */
 
 .filter-container {
   display: flex;
-  align-items: flex-start;
   width: 1060px;
   margin: 0 auto;
   padding: 0;
@@ -822,43 +950,10 @@ background-color: #873106;}
 
 .catalog-filter {
   display: flex;
-  width: 370px;
-  margin: 0 auto 0 0;
+  min-width: 150px;
   font-family: "PT Sans", sans-serif;
   border: none;
-}
-
-.catalog-filter-title {
-  width: 150px;
-  margin: 0 70px 0 0;
-  padding: 0;
-  text-transform: capitalize;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #ffffff;
-}
-
-.catalog-filter-item {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23px;
-  color: #ffffff;
-}
-
-.catalog-filter-checkbox {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.catalog-filter-radio {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-right: auto;
 }
 
 .catalog-filter-group {
@@ -867,6 +962,117 @@ background-color: #873106;}
   border: none;
 }
 
+.catalog-filter-title {
+  margin: 0 71px 32px 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.catalog-filter-checkbox {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-item {
+  align-content: start;
+  margin: 0 20px 16px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.input-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  margin: 0 12px 0 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.input-checkbox :hover {
+  color: #3F5E72;
+}
+
+.input-checkbox:focus {
+  color: #ffffff;
+}
+
+.input-checkbox :active {
+  color: #ffffff4D;
+}
+
+
+
+
+
+
+
+
+/* ul  */
+.catalog-filter-radio {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* li */
+.catalog-filter-item-radio {
+
+  position: relative;
+  left: -5px;
+  top: -1px;
+  margin: 0;
+  padding: 0 0 9px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+/* input */
+.input-radio {
+  width: 21px;
+  height: 22px;
+  margin: 0 12px 0 0;
+  padding: 0;
+
+}
+
+.input-radio:hover {
+  color: #3F5E72;
+}
+
+.input-radio:focus {
+  color: #ffffff;
+}
+.input-radio:active {
+  color: #ffffff4D;
+}
+
+
+
+
+
+
+
+
+
+
+
 .price-wrapper {
   width: 290px;
   color: #ffffff;
@@ -874,6 +1080,11 @@ background-color: #873106;}
 }
 
 .buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 20px;
   width: 190px;
   margin: 0;
   padding: 0;
@@ -889,7 +1100,7 @@ background-color: #873106;}
   width: 190;
   min-height: 36px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   padding: 8px 50px;
   border-radius: 4px;
   border: none;
@@ -918,6 +1129,7 @@ background-color: #873106;}
   color: #ffffff;
   min-height: 36px;
   cursor: pointer;
+  background: transparent;
 }
 
 
