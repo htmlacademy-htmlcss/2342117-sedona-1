@@ -46,6 +46,7 @@ img {
 
 html {
   height: 100%;
+  background-color: #F2F2F2;
 }
 
 body {
@@ -64,8 +65,7 @@ body {
 
 .page-shadow,
 .page-catalog-shadow {
-  box-shadow: 40px 0 0 -1px #f2f2f2,
-    -40px 0 0 -1px #f2f2f2;
+  box-shadow: 5px 0 8px 6px #f2f2f2;
 }
 
 .page-main-container {
@@ -87,6 +87,7 @@ body {
 }
 
 .logo-link {
+  display: block;
   width: 140px;
   height: 70px;
   margin: 0 30px 0 0;
@@ -134,12 +135,13 @@ body {
   left: 4px;
 }
 
-.main-link-home::before {
+.main-link-home::after {
   position: absolute;
   content: "";
   width: 67px;
   height: 2px;
   bottom: -1px;
+  left: 15px;
   background-color: #756257;
 }
 
@@ -171,7 +173,7 @@ body {
 .nav-user-item {
   position: relative;
   min-width: 45px;
-  min-height: 65px;
+  min-height: 62px;
   margin: 0;
   padding: 0;
 }
@@ -186,7 +188,7 @@ body {
   text-decoration: none;
   margin: 0;
   width: 45px;
-  height: 65px;
+  height: 62px;
   padding: 22px 12px;
 }
 
@@ -245,7 +247,7 @@ body {
 .nav-user-link-button {
   display: block;
   position: relative;
-  top: 12px;
+  top: 10px;
   list-style: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -278,6 +280,10 @@ body {
 
 .nav-user-link-button:focus {
   background-color: #756157;
+}
+
+.product-card-button:disabled {
+  background-color: #e5e5e5;
 }
 
 /* main */
@@ -670,6 +676,7 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: #000000;
+  cursor: pointer;
 }
 
 .subscribe-button,
@@ -687,23 +694,23 @@ body {
   font-weight: 700;
   line-height: 36px;
   color: #ffffff;
-  background: #82B3D3;
+  background: #82b3d3;
   cursor: pointer;
 }
 
 .subscribe-button:hover,
 .subscribe-button-catalog:hover {
-  background-color: #68A2CA;
+  background-color: #68a2Ca;
 }
 
 .subscribe-button:active,
 .subscribe-button-catalog:active {
-  background-color: #68A2CA;
+  background-color: #68a2Ca;
 }
 
 .subscribe-button:focus,
 .subscribe-button-catalog:focus {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 /* ФУТЕР */
@@ -835,7 +842,6 @@ body {
 /* фильтр */
 
 
-
 .catalog-products-filter {
   position: relative;
   padding: 35px 70px 50px 70px;
@@ -932,12 +938,6 @@ body {
   color: #ffffff4D;
 }
 
-
-
-
-
-
-
 /* фильтры */
 
 .filter-container {
@@ -971,13 +971,6 @@ body {
   color: #ffffff;
 }
 
-
-
-
-
-
-
-
 /* ul */
 .catalog-filter-list-checkbox {
   display: flex;
@@ -996,7 +989,6 @@ body {
   font-weight: 400;
   line-height: 23px;
   color: #ffffff;
-
 }
 
 /* label */
@@ -1011,9 +1003,6 @@ label-control-checkbox {
   top: -2px;
 }
 
-
-
-
 /* input квадрат */
 .input-checkbox {
   position: relative;
@@ -1023,7 +1012,7 @@ label-control-checkbox {
   border-radius: 4px;
   margin: 0 12px 0 0;
   padding: 0;
-  /* color: #3F5E72; */
+  cursor: pointer;
   background-color: #fff;
   appearance: none;
 }
@@ -1050,29 +1039,6 @@ label-control-checkbox {
   transform: rotate(40deg);
 }
 
-/* состояния */
-/* .input-checkbox :hover {
-  color: #3F5E72;
-}
-
-.input-checkbox:focus {
-  color: #ffffff;
-}
-
-.input-checkbox :active {
-  color: #ffffff4D;
-} */
-
-/* label-control-checkbox:hover .control-mark-checkbox {
-  border-color: #3f5e72;
-}
-
-.input-checkbox:disabled + .control-mark-checkbox {
-  border-color: #83b3d3;
-} */
-
-
-
 /* ul  */
 .catalog-filter-list-radio {
   display: flex;
@@ -1081,6 +1047,7 @@ label-control-checkbox {
   margin: 0;
   padding: 0;
 }
+
 /* li */
 .catalog-filter-item-radio {
   position: relative;
@@ -1092,17 +1059,20 @@ label-control-checkbox {
   line-height: 23px;
   color: #ffffff;
 }
+
 /* label */
 .label-control-radio {
   position: relative;
   display: block;
 }
+
 /* span */
 .control-mark-radio {
   position: relative;
   top: -8px;
   left: 5px;
 }
+
 /* input */
 .input-radio {
   position: relative;
@@ -1115,6 +1085,7 @@ label-control-checkbox {
   border-radius: 50%;
   background-color: #ffffff;
   appearance: none;
+  cursor: pointer;
 }
 
 .input-radio[type="radio"]:checked::before {
@@ -1127,29 +1098,6 @@ label-control-checkbox {
   border-radius: 50%;
   content: "";
 }
-
-
-/* .input-radio:hover {
-  color: #3F5E72;
-}
-
-.input-radio:focus {
-  color: #ffffff;
-}
-
-.input-radio:active {
-  color: #ffffff4D;
-}
- */
-
-
-
-
-
-
-
-
-
 
 .price-wrapper {
   width: 290px;
@@ -1236,6 +1184,7 @@ label-control-checkbox {
 .button-reset:active {
   color: #f2f2f2;
 }
+
 /* панель под фильтром */
 
 .searching-results {
@@ -1275,7 +1224,7 @@ label-control-checkbox {
   margin: 0 70px 0 0;
   padding: 11px 19px 11px;
   border-radius: 4px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -1324,11 +1273,9 @@ label-control-checkbox {
   position: relative;
   top: -3px;
   width: 48px;
-  height: 48px;
+  min-height: 48px;
   margin: 0;
   bottom: 0;
-  border-radius: 4px;
-  border: 2px solid #E5E5E5;
   cursor: pointer;
 }
 
@@ -1343,17 +1290,19 @@ label-control-checkbox {
   transform: translate(-50%, -50%);
   padding: 10px 14px;
   color: #000000;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
-.view-button-item:hover {
+.view-link:hover {
   border-color: #000000;
 }
 
-.view-button-item:focus {
-  border-color: #68A2CA;
+.view-link:focus {
+  border-color: #68a2Ca;
 }
 
-.view-button-item:active {
+.view-link:active {
   border-color: #000000;
 }
 
@@ -1364,22 +1313,26 @@ label-control-checkbox {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   column-gap: 60px;
-  row-gap: 13px;
+  row-gap: 18px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 79px;
   width: 1060px;
 }
 
 .product-card-item {
+  position: relative;
+  left: -1px;
+  top: -1px;
   display: grid;
-  /* grid-template-rows: 300px min-content min-content  auto auto; */
   grid-template-columns: 140px 140px;
-
   column-gap: 20px;
   padding: 20px;
   width: 340px;
+  margin-bottom: 0;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
 }
 
 .product-card-image {
@@ -1400,7 +1353,6 @@ label-control-checkbox {
   margin: 0;
   padding: 0;
   margin-bottom: 16px;
-
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -1427,49 +1379,60 @@ label-control-checkbox {
 
 .product-card-button {
   grid-column: 1/2;
-
   width: 140px;
   min-height: 31px;
   padding: 8px 10px 7px 27px;
   margin: 0;
   margin-bottom: 16px;
-
   text-decoration: none;
-
   border-radius: 4px;
   border: none;
-
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-
   color: #ffffff;
   background-color: #756157;
   cursor: pointer;
-
 }
 
 .product-card-button:last-child {
   margin-bottom: 0;
 }
 
+.product-card-button:hover {
+  background-color: #615048;
+}
+
+.product-card-button:focus {
+  background-color: #615048;
+}
+
+.product-card-button:active {
+  background-color: #756157;
+  color: #ffffff4d;
+}
+
+.product-card-button:disabled {
+  background-color: #e5e5e5;
+}
+
+
 .button-favorites,
-.button-link-favorites-second {
+.button-favorites-secondary {
   grid-column: 2/3;
   display: inline-block;
   width: 140px;
   min-height: 33px;
-  padding: 8px 2px 8px 16px;
-  margin: 0;
+  padding: 8px 2px 8px 2px;
   margin-bottom: 16px;
-
   border-radius: 4px;
   border: none;
   text-decoration: none;
-
+  font-family: PT Sans;
+  font-style: normal;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
   color: #ffffff;
@@ -1477,8 +1440,42 @@ label-control-checkbox {
   cursor: pointer;
 }
 
-.button-link-favorites-second {
+button-favorites:hover {
+  background-color: #68a2cA;
+}
+
+button-favorites:focus {
+  background-color: #68a2cA;
+}
+
+button-favorites:active {
+  background-color: #82b3d3;
+  color: #ffffff4d;
+}
+
+button-favorites:disabled {
+  background-color: #ffffff4d;
+}
+
+.button-favorites-secondary {
   background-color: #7db54f;
+}
+
+.button-favorites-secondary:hover {
+  background-color: #6c9e42;
+}
+
+.button-favorites-secondary:focus {
+  background-color: #6c9e42;
+}
+
+.button-favorites-secondary:active {
+  background-color: #7DB54F;
+  color: #ffffff4d;
+}
+
+.button-favorites-secondary:disabled {
+  background-color: #e5e5e5;
 }
 
 .star-rating-4 {
@@ -1487,7 +1484,7 @@ label-control-checkbox {
   background-image: url("../images/search-bar/star.svg");
   background-repeat: repeat-x;
   background-position: right;
-  margin-right: 12px;
+  margin-bottom: 0;
 }
 
 .star-rating-4:last-child {
@@ -1495,8 +1492,6 @@ label-control-checkbox {
 }
 
 .hotel-card-rating {
-  position: relative;
-  top: -7px;
   grid-column: 2/3;
   align-self: end;
   width: 140px;
@@ -1504,16 +1499,11 @@ label-control-checkbox {
   margin: 0;
   border: none;
   border-radius: 4px;
-
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #F2F2F2;
-}
-
-.hotel-card-rating:last-child {
-  margin-bottom: 0;
 }
 
 /* ПАГИНАЦИЯ */
@@ -1529,14 +1519,14 @@ label-control-checkbox {
   align-items: center;
   display: flex;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   margin-right: 8px;
   border-radius: 4px;
   background-color: #82b3d3;
 }
 
 .pagination-item:last-child {
-  margin-right: o;
+  margin-right: 0;
 }
 
 .pagination-link {
@@ -1551,13 +1541,26 @@ label-control-checkbox {
   cursor: pointer;
 }
 
+.pagination-link:hover {
+  background-color: #68a2ca;
+  border-color: #82b3d3;
+}
 
+.pagination-link:focus {
+  background-color: #68a2ca;
+  border-color: #82b3d3;
+}
+
+.pagination-link:active {
+  color: #ffffff4d;
+  background-color: #82b3d3;
+}
 
 .pagination-item-active {
   display: flex;
   align-items: center;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   margin-right: 8px;
   border-radius: 4px;
   background-color: #f2f2f2;
@@ -1573,14 +1576,28 @@ label-control-checkbox {
   color: #000000;
 }
 
+/*
+.pagination-link-active:hover {
+  color: #82b3d3;
+  background-color: #F2F2F2;
+}
+
+.pagination-link-active:focus {
+  color: #82b3d3;
+  background-color: #68a2ca;
+}
+
+.pagination-link-active:active {
+  color: #ffffff4d;
+  background-color: #82B3D3;
+} */
+
+
 /* подписка каталог */
 
 .subscription-catalog {
   text-align: center;
   margin: 0;
-  padding: 95px 258px 104px;
+  padding: 74px 258px 103px;
   color: #000000;
 }
-
-/* остальные классы
-объеденил с главной */
