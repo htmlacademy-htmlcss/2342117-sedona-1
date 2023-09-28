@@ -66,13 +66,6 @@
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
-
-
-
-
-
-
-
               <ul class="catalog-filter-list-checkbox">
                 <li class="catalog-filter-item">
                   <label class="label-control-checkbox">
@@ -93,10 +86,6 @@
                   </label>
                 </li>
               </ul>
-
-
-
-
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Тип жилья:</legend>
@@ -111,24 +100,17 @@
                   <label class="label-control-radio">
                     <input class="input-radio" name="variety" type="radio" value="motels">
                  <span class="control-mark-radio"> Мотель</span>
-
                   </label>
                 </li>
                 <li class="catalog-filter-item catalog-filter-item-radio">
                   <label class="label-control-radio">
                     <input class="input-radio" name="variety" type="radio" value="apartments">
                     <span class="control-mark-radio">Апартаменты</span>
-
                   </label>
                 </li>
               </ul>
             </fieldset>
           </form>
-
-
-
-
-
           <div class="price-wrapper">
             <h3 class="price"> Cтоимость</h3>
           </div>
@@ -138,21 +120,15 @@
           </div>
         </div>
       </section>
-
       <section class="searching-results">
         <span class="visually-hidden">Результаты поиска.</span>
-
-
-
         <div class="select-control-container">
-
           <h2 class="caption-found">Найдено гостиниц: 38</h2>
           <select class="select-control" aria-label="сортировка">
             <option class="option" value="popular">Сначало дешевые</option>
             <option class="option" value="cheap">Сначала популярное</option>
             <option class="option" value="expensive">Сначало дорогое</option>
           </select>
-
           <ul class="view-button-group">
             <li class="view-button-item">
               <a href="#" class="view-table view-link">
@@ -167,8 +143,6 @@
                 </svg>
               </a>
             </li>
-
-
             <li class="view-button-item">
               <a href="#" class="view-list view-link">
                 <span class="visually-hidden">Показать Карточки.</span>
@@ -178,8 +152,6 @@
                 </svg>
               </a>
             </li>
-
-
             <li class="view-button-item">
               <a href="#" class="view-card view-link">
                 <span class="visually-hidden">Показать список.</span>
@@ -198,6 +170,13 @@
           </ul>
         </div>
 
+
+
+
+
+
+
+
         <ul class="product-card-list">
           <li class="product-card-item">
             <a class="product-card-link" href="#">
@@ -208,12 +187,12 @@
             <b class="product-text-price">Гостиница</b>
             <b class="product-price">От 4000 ₽</b>
             <a class="product-card-button" href="#">Подробнее</a>
-            <button class="button-favorites" type="button">В избранное</button>
-            <p class="star-rating-4">
+            <button class="button-favorites" type="button">в избранное</button>
+            <div class="star-rating-4">
               <span class="visually-hidden">
                 Четырехзвездочный отель.
               </span>
-            </p>
+            </div>
             <p class="hotel-card-rating">
               Рейтинг: 8,5
             </p>
@@ -227,12 +206,14 @@
             <b class="product-text-price">Гостиница</b>
             <b class="product-price">От 5000 ₽</b>
             <a class="product-card-button" href="#">Подробнее</a>
-            <button class="button-favorites-second" type="button">В избранное</button>
-            <p class="star-rating-4">
+            <a class="button-link-favorites-second" href="#">в избранном</a>
+
+            <!-- <button class="button-favorites-second" type="button">в избранном</button> -->
+            <div class="star-rating-4">
               <span class="visually-hidden">
                 Четырехзвездочный отель.
               </span>
-            </p>
+            </div>
             <p class="hotel-card-rating">
               Рейтинг: 9,2
             </p>
@@ -246,12 +227,12 @@
             <b class="product-text-price">Гостиница</b>
             <b class="product-price">От 2500 ₽</b>
             <a class="product-card-button" href="#">Подробнее</a>
-            <button class="button-favorites" type="button">В избранное</button>
-            <p class="star-rating-3">
+            <button class="button-favorites" type="button">в избранное</button>
+            <div class="star-rating-3">
               <span class="visually-hidden">
                 Трехзвездочный отель.
               </span>
-            </p>
+            </div>
             <p class="hotel-card-rating">
               Рейтинг: 6,9
             </p>
@@ -265,20 +246,20 @@
             <b class="product-text-price">Гостиница</b>
             <b class="product-price">От 1500 ₽</b>
             <a class="product-card-button" href="#">Подробнее</a>
-            <button class="button-favorites" type="button">В избранное</button>
-            <p class="star-rating-2">
+            <button class="button-favorites" type="button">в избранное</button>
+            <div class="star-rating-2">
               <span class="visually-hidden">
                 Двухзвездочный отель.
               </span>
-            </p>
+            </div>
             <p class="hotel-card-rating">
               Рейтинг: 5,0
             </p>
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item-first">
-            <a class="pagination-link-first" href="#">1</a>
+          <li class="pagination-item-active">
+            <a class="pagination-link-active" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -289,8 +270,8 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item-fifth">
-            <a class="pagination-link-fifth" href="#">...</a>
+          <li class="pagination-item-active">
+            <a class="pagination-link-active" href="#">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
