@@ -40,7 +40,7 @@
               </a>
             </li>
             <li class="nav-user-item">
-              <a href="#" class="nav-user-link-button">Хочу сюда</a>
+              <a href="#" class="nav-user-link-button">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -65,6 +65,9 @@
               <a class="breadcrumbs-link-hotels">Гостиницы</a>
             </li>
           </ul>
+
+
+
           <div class="filter-container">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
@@ -90,6 +93,8 @@
                   </li>
                 </ul>
               </fieldset>
+
+
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Тип жилья:</legend>
                 <ul class="catalog-filter-list-radio">
@@ -114,14 +119,77 @@
                 </ul>
               </fieldset>
             </form>
+
+
+
+
             <div class="price-wrapper">
-              <h3 class="price"> Cтоимость</h3>
+              <form class="catalog-filter" action="?" method="get">
+              <fieldset class="catalog-filter-group catalog-filter-group-range">
+                <legend class="catalog-filter-title">
+                  Cтоимость, &#8381:
+                </legend>
+
+
+                 <div class="form-wrapper">
+
+                 <div class="range-wrapper">
+                 <label class="range-wrapper-label" for="">
+                  <input class="range-input range-input-left" type="number" value="0" name="min-price" placeholder="от">
+                  <!-- <span class="fake-placeholder">от</span> -->
+                </label>
+              </div>
+
+                <div class="range-wrapper">
+                <label class="range-wrapper-label" for="">
+                  <input class="range-input range-input-right" type="number" value="9000" name="max-price" placeholder="до">
+                  <!-- <span class="fake-placeholder">до</span> -->
+                </label>
+              </div>
+
+
+
+
+              <div class="range-scale">
+              <div class="range-bar" >
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+              </div>
+              <!-- style="left: 42px; width: 136px" -->
+
+
             </div>
+
+
+            </fieldset>
+            </form>
+            </div>
+
+
+
+
             <div class="buttons-wrapper">
               <button class="button-apply" type="submit">Применить</button>
               <button class="button-reset" type="reset">Сбросить</button>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
         </section>
         <section class="searching-results">
           <span class="visually-hidden">Результаты поиска.</span>
