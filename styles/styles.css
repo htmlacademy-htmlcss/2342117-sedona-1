@@ -1129,7 +1129,6 @@ label-control-checkbox {
   margin: 0 2px 0 0;
 }
 
-
 .range-input {
   border: none;
   border-radius: 0 4px 4px 0;
@@ -1145,42 +1144,71 @@ label-control-checkbox {
 }
 
 .range-input-left {
-  border-radius:  4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
 }
-
-
 
 .range-scale {
   position: absolute;
   bottom: -48px;
+  left: 1px;
   height: 4px;
   width: 287px;
   background-color: #ffffff;
   border-radius: 2px;
 }
 
+.range-bar {
+  width: 62px;
+  height: 4px;
+  position: absolute;
+  right: 0;
+  background-color: #807e7e;
+}
+
 .range-toggle {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
-  border-radius: 4px;
+  border-radius: 5px;
   border: none;
 }
 
 .toggle-min {
   position: absolute;
   bottom: -8px;
-  /* left: 1px; */
+  left: -225px;
 }
 
 .toggle-max {
   position: absolute;
   right: 60px;
-  top: -6px;
+  top: -8px;
+  left: -19px;
 }
 
+.range-label-from {
+  position: absolute;
+  right: 165px;
+  top: 12px;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #828181;
+}
 
-
+.range-label-to {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #828181;
+}
 
 .buttons-wrapper {
   display: flex;
@@ -1563,9 +1591,6 @@ label-control-checkbox {
   padding: 6px 12px 9px 0;
 }
 
-
-
-
 .hotel-card-rating {
   grid-column: 2/3;
   align-self: end;
@@ -1650,7 +1675,6 @@ label-control-checkbox {
   text-transform: uppercase;
   color: #000000;
 }
-
 
 .pagination-link-active:hover {
   background-color: #f2f2f2;
