@@ -133,10 +133,12 @@
                     </div>
                     <div class="range-scale">
                       <div class="range-bar">
-                        <button class="range-toggle toggle-min">
+                        <!-- эту часть -  style="right: 0px; width: 62px;"
+                        не получилось вставить в range-bar в html(не реагирует)-->
+                        <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range-toggle toggle-max">
+                        <button class="range-toggle toggle-max" type="button">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>
@@ -458,6 +460,7 @@
               </p>
             </li>
           </ul>
+          <div class="divider-catalog"></div>
           <ul class="pagination">
             <li class="pagination-item-active">
               <a class="pagination-link-active" href="#">1</a>

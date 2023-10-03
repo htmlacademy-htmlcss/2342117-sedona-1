@@ -1141,6 +1141,13 @@ label-control-checkbox {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  cursor: pointer;
+}
+
+.range-input::-webkit-inner-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .range-input-left {
@@ -1154,7 +1161,7 @@ label-control-checkbox {
   height: 4px;
   width: 287px;
   background-color: #ffffff;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .range-bar {
@@ -1163,20 +1170,37 @@ label-control-checkbox {
   position: absolute;
   right: 0;
   background-color: #807e7e;
+  border-radius: 4px;
 }
 
 .range-toggle {
+  position: absolute;
   width: 20px;
   height: 20px;
   background-color: #ffffff;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  outline: 2px solid #83b3d3;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.range-toggle:active {
+  outline: 1px solid #83b3d3;
 }
 
 .toggle-min {
   position: absolute;
   bottom: -8px;
   left: -225px;
+  cursor: pointer;
+
 }
 
 .toggle-max {
@@ -1422,7 +1446,7 @@ label-control-checkbox {
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 79px;
+  margin-bottom: 38px;
   width: 1060px;
 }
 
@@ -1558,10 +1582,6 @@ label-control-checkbox {
   color: #ffffff4d;
 }
 
-/* button-favorites:disabled {
-  background-color: #ffffff4d;
-} */
-
 .button-favorites-secondary {
   background-color: #7db54f;
 }
@@ -1607,6 +1627,12 @@ label-control-checkbox {
 }
 
 /* ПАГИНАЦИЯ */
+.divider-catalog {
+  width: 1060;
+  height: 1px;
+  background-color: #E6E6E6;
+  margin-bottom: 38px;
+}
 
 .pagination {
   display: flex;
