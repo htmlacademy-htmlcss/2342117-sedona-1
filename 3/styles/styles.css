@@ -1,0 +1,1825 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "PT Sans";
+
+  font-display: swap;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "PT Sans";
+
+  font-display: swap;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #756157;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+
+.button:disabled,
+.button-disabled {
+  background-color: #e5e5e5;
+  pointer-events: none;
+}
+
+/*
+ПРОПИСЫВАЕМ СВОЙСТВА ДЛЯ ГОЛУБЫХ И ПРОЗРАЧНЫХ КНОПОК
+Так же прописываем для них состояния, перебиваем только то что нужно
+*/
+.button-light {
+  background-color: #82b3d3;
+}
+
+.button-light:hover {
+  background-color: #68a2ca;
+}
+
+.button-light:focus {
+  background-color: #68a2ca;
+}
+
+.button-light:active {
+  background-color: #82b3d3;
+}
+
+.button-light:disabled,
+.button-light-disabled {
+  background-color: #e5e5e5;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+.button-transparent:hover {
+  background-color: transparent;
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.button-transparent:active {
+  background-color: transparent;
+}
+
+.button-transparent:disabled,
+.button-transparent-disabled {
+  color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+}
+
+/*
+СВОЙСТВА ДЛЯ INPUT
+*/
+
+.form-input {
+  width: 100%;
+  height: 48px;
+  padding: 13px 17px 10px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  border-radius: 4px;
+
+  appearance: none;
+}
+
+.form-input[type="number"] {
+  appearance: textfield;
+}
+
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.form-input::placeholder {
+  color: #000000;
+
+  opacity: 0.6;
+}
+
+.form-input:hover:not(:disabled) {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.form-input:focus {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.form-input:focus:not(:placeholder-shown) {
+  background-color: #f2f2f2;
+  border-color: #000000;
+  outline: none;
+}
+
+.form-input-disabled,
+.form-input:disabled {
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.form-input-valid {
+  background-color: #ffffff;
+  border-color: #7db54f;
+}
+
+.form-input-error {
+  border-color: #ff5757;
+}
+
+/*
+СВОЙСТВА ДЛЯ ЗАГОЛОВКОВ И ТЕКСТА ПОД НИМ
+*/
+.page-title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.page-text {
+  margin: 0;
+
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/* Свойства для заголовка h1, страниц может быть много вынесем в отдельный класс эти свойства */
+.page-main-title {
+  margin: 0;
+
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.page-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.page-header {
+  position: relative;
+  z-index: 1;
+  min-height: 65px;
+  padding: 0 70px;
+}
+
+/* НАВИГАЦИЯ */
+
+.navigation {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  height: 70px;
+  cursor: pointer;
+}
+
+/* Можно было сделать просто прозрачностью, а не фильтром */
+/* .logo-link:hover */
+.logo:hover {
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.logo:focus {
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.logo:active {
+  filter: drop-shadow(0 5px 5px #83b3d3);
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-logo {
+  margin: 0 11px -6px 0;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav-link {
+  position: relative;
+  display: block;
+  padding: 20px 16px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-nav-link-current::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  bottom: -1px;
+  left: 15px;
+  height: 2px;
+  background-color: #756257;
+}
+
+.main-nav-link:hover {
+  background-color: #f2f2f2;
+}
+
+.main-nav-link:focus {
+  background-color: #f2f2f2;
+}
+
+.main-nav-link:active {
+  background-color: #e6e6e6;
+}
+
+/* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
+
+.nav-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 150px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-user-link {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 62px;
+  text-decoration: none;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.nav-user-link:hover {
+  background-color: #f2f2f2;
+}
+
+.nav-user-link:focus {
+  background-color: #f2f2f2;
+}
+
+.nav-user-link:active {
+  background-color: #e6e6e6;
+}
+
+.nav-user-link-search {
+  background-image: url("../images/svg/icon-search.svg");
+}
+
+.nav-user-link-favorite {
+  background-image: url("../images/svg/icon-favorites.svg");
+}
+
+.nav-link-favorite-number {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 4px;
+
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #7db54f;
+  border-radius: 50%;
+}
+
+.nav-button {
+  align-self: center;
+  width: 160px;
+}
+
+/* main */
+
+.greetings {
+  padding: 50px 70px 82px; /**/
+  color: #ffffff; /**/
+  background-color: #5c84ab;
+  background-image: url("../images/svg/divider.svg"),
+    url("../images/background/background-greetings.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto, cover;
+}
+
+.greetings-image {
+  display: block;
+  width: 458px;
+  height: 352px;
+  margin: 0 auto;
+}
+
+.advantages-description {
+  padding: 70px 70px 90px;
+}
+
+.advantages-description-title {
+  margin-bottom: 24px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item:not(.advantages-item-full):nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-full {
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.advantages-item-revers {
+  flex-direction: row-reverse;
+}
+
+.advantages-content {
+  width: 400px;
+  min-height: 385px;
+  padding: 115px 85px 100px;
+}
+
+.advantages-item-full .advantages-content {
+  padding-top: 105px;
+}
+
+.advantages-title {
+  position: relative;
+  margin: 0 0 30px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.advantages-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+}
+
+.advantages-item-full .advantages-title {
+  color: #ffffff;
+}
+
+.advantages-item-full .advantages-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-text {
+  margin: 0;
+}
+
+.advantages-picture {
+  max-width: 800px;
+  margin: 0;
+}
+
+.advantages-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.services-description {
+  padding: 64px 15px;
+}
+
+.services-description-title {
+  margin-bottom: 20px;
+}
+
+/* рекомендации */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-item {
+  width: 400px;
+  min-height: 385px;
+  padding: 184px 85px 20px;
+  text-align: center;
+  background-color: rgba(130, 180, 211, 0.12);
+  background-repeat: no-repeat;
+  background-position: top 80px center;
+}
+
+.services-item:nth-child(2n) {
+  background-color: #ffffff;
+}
+
+.services-item-house {
+  background-image: url("../images/svg/icon-house.svg");
+}
+
+.services-item-food {
+  background-image: url("../images/svg/icon-food.svg");
+}
+
+.services-item-souvenirs {
+  background-image: url("../images/svg/icon-souvenirs.svg");
+}
+
+.services-title {
+  margin: 0 0 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.services-text {
+  margin: 0;
+}
+
+
+/* ОФЕР */
+
+.search {
+  padding: 96px 70px;
+  text-align: center;
+}
+
+.search-title {
+  margin-bottom: 20px;
+}
+
+.search-text {
+  margin-bottom: 55px;
+}
+
+3. Так как это inline-block то на него действует text-align у родителя
+/* то-есть, inline-block оставляем? */
+.search-button {
+  display: inline-block;
+  width: 376px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* ПОДПИСКА */
+
+.subscribe {
+  padding: 96px 70px 103px;
+}
+
+.subscribe-home {
+  text-align: center;
+  color: #ffffff;
+  background-color: #5c84ab;
+  background-image: url("../images/background/background-subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe-title {
+  margin-bottom: 20px;
+}
+
+.subscribe-home .subscribe-title {
+  color: #ffffff;
+}
+
+.subscribe-text {
+  margin-bottom: 55px;
+}
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  width: 684px;
+  margin: 0 auto;
+}
+
+.subscribe-input {
+
+  height: 100%;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-input::placeholder {
+  font-weight: 400;
+}
+
+.subscribe-button,
+.subscribe-button-catalog {
+  width: 232px;
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* фильтр */
+
+.filter {
+  padding: 34px 70px 70px;
+  color: #ffffff;
+  background-color: #5c84ab;
+  background-image: url("../images/background/background-filter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter-main-title {
+  margin-bottom: 7px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  position: relative;
+  margin-right: 28px;
+
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -17px;
+
+  width: 8px;
+  height: 11px;
+
+  background-image: url("../images/svg/arrow-right.svg");
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-link-current {
+  pointer-events: none;
+}
+
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link-home {
+  width: 13px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.filter-form {
+  display: flex;
+  gap: 20px 70px;
+  flex-wrap: wrap;
+}
+
+
+.filter-group {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-group-range {
+  width: 288px;
+  margin-left: auto;
+}
+
+.filter-group-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 191px;
+  padding-top: 56px;
+}
+
+.filter-title {
+  margin-bottom: 33px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.control-label {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 16px;
+  justify-content: start;
+  align-items: start;
+  width: fit-content;
+
+  line-height: 23px;
+}
+
+.control-input {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.control-input[type="checkbox"]:checked {
+  background-image: url("../images/svg/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 11px;
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #3f5e72;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+НЕТ СОСТОЯНИЙ ДЛЯ ЧЕКБОКСОВ И РАДИОКНОПОК
+*/
+
+.control-label:hover {
+  opacity: 0.6;
+}
+
+.control-label:focus-within .control-input {
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.control-label:active {
+  opacity: 0.3;
+}
+
+.control-input:disabled,
+.control-input:disabled + .control-text {
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.range-input-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-bottom: 35px;
+}
+
+.range-item {
+  position: relative;
+}
+
+.range-item label {
+  position: absolute;
+  right: 0;
+
+  padding: 11px 20px;
+
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range-input {
+  padding: 10px 55px 10px 18px;
+}
+
+.range-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-max {
+  border-radius: 0 4px 4px 0;
+}
+
+
+.range-scale {
+  position: relative;
+  height: 20px;
+}
+
+.range-scale::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: rgb(255, 255, 255, 0.3);
+  transform: translateY(-50%);
+}
+
+.range-bar {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  height: 4px;
+
+  background-color: #ffffff;
+  transform: translateY(-50%);
+}
+
+.range-toggle {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-max {
+  position: absolute;
+  top: -6px;
+  right: 60px;
+} */
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  right: 0;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), 0 0 0 3px #83b3d3;
+}
+
+.range-toggle:active {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4), 0 0 0 2px #83b3d3;
+}
+
+.range-toggle:disabled {
+  color: #ffffff;
+
+  background-color: #e5e5e5;
+
+  pointer-events: none;
+}
+
+/* .button-apply  */
+.filter-submit {
+  margin-bottom: 31px;
+}
+
+/* панель под фильтром */
+
+.sorting {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 70px;
+  align-items: center;
+  padding: 50px 70px 39px;
+}
+
+.sorting-title {
+  text-align: left;
+}
+
+.sorting-select {
+  width: 292px;
+  height: 49px;
+  margin-left: auto;
+  padding: 5px 40px 5px 18px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
+
+  background-image: url("../images/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right 18px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.sorting-select:hover {
+  border-color: #68a2ca;
+}
+
+.sorting-select:focus {
+  border-color: #68a2ca;
+}
+
+.sorting-select:disabled {
+  color: #000000;
+
+  border-color: #000000;
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.view {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 8px;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.view-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+
+  color: #000000;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+
+  fill: currentColor;
+}
+
+.view-link svg {
+  width: 16px;
+  height: 14px;
+}
+
+.view-link-active {
+  border-color: #000000;
+}
+
+.view-link:hover {
+  border-color: #000000;
+}
+
+.view-link:focus {
+  border-color: #68a2ca;
+}
+
+.view-link:active {
+  border-color: #000000;
+}
+
+.view-link-disabled,
+.view-link:disabled {
+  opacity: 0.3;
+}
+
+/* ГАЛЕРЕЯ */
+
+.hotels {
+  padding: 0 70px;
+}
+
+.hotels-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px 20px;
+  margin: 0;
+  padding: 0 0 40px;
+  list-style: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.hotels-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  align-content: start;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+
+.hotels-link {
+  display: block;
+  grid-column: 1/-1;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+.hotels-link:hover {
+  opacity: 0.6;
+}
+
+.hotels-link:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: 2px;
+}
+
+.hotels-link:active {
+  opacity: 0.3;
+}
+
+.hotels-link img {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.hotels-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotels-item p {
+  margin: 0;
+}
+
+.hotels-text + .hotels-text {
+  text-align: right;
+}
+
+.hotels-favorites-active {
+  background-color: #7db54f;
+}
+
+.hotels-favorites-active:hover {
+  background-color: #6c9e42;
+}
+
+.hotels-favorites-active:focus {
+  background-color: #6c9e42;
+}
+
+.hotels-favorites-active:active {
+  background-color: #7db54f;
+}
+
+.hotels-favorites-active-disabled,
+.hotels-favorites-active:disabled {
+  background-color: #e5e5e5;
+}
+
+/* Прописываем высоту и фоновые характеристики */
+/* stars */
+.hotels-rating-star {
+  height: 37px;
+  background-image: url("../images/svg/stars.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.hotels-rating-star-4 {
+  width: 90px;
+}
+
+.hotels-rating-star-3 {
+  width: 70px;
+}
+
+.hotels-rating-star-2 {
+  width: 50px;
+}
+
+.hotels-rating-text {
+  padding: 9px 10px 8px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 38px 0 60px;
+  list-style: none;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 5px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: #82b3d3;
+  border: 1px solid #82b3d3;
+  border-radius: 4px;
+}
+
+
+.pagination-link:hover {
+  color: #ffffff;
+  background-color: #68a2ca;
+}
+
+.pagination-link:focus {
+  color: #ffffff;
+  background-color: #68a2ca;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.pagination-link-current {
+  color: #000000;
+
+  background-color: #f2f2f2;
+  border-color: transparent;
+
+  pointer-events: none;
+}
+
+.pagination-link-more {
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.pagination-link-more:focus {
+  color: #000000;
+
+  background-color: transparent;
+  border-color: #68a2ca;
+}
+
+.pagination-link-more:hover,
+.pagination-link-more:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: transparent;
+  border-color: #68a2ca;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 70px 32px;
+}
+
+/* Лучше на гридах */
+.socials-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* переделать на гриды */
+.social-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 48px;
+  height: 41px;
+  color: #83b3d3;
+  fill: currentColor;
+}
+
+.social-link:hover {
+  color: #68a2ca;
+}
+
+.social-link:focus {
+  color: #68a2ca;
+}
+
+.social-link:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.page-footer-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.page-footer-phone:hover {
+  color: #756157;
+}
+
+.page-footer-phone:focus {
+  color: #756157;
+}
+
+.page-footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.website-htmlacademy {
+  display: block;
+  width: 115px;
+  height: 33px;
+  color: #000000;
+  cursor: pointer;
+  fill: currentColor;
+}
+
+.website-htmlacademy:hover {
+  color: #756157;
+}
+
+.website-htmlacademy:focus {
+  color: #756157;
+}
+
+.website-htmlacademy:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+
+
+
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.80);
+}
+
+/* модальное окно */
+.modal {
+  width: 717px;
+  min-height: 576px;
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+/* фон для крестика */
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  outline: none
+}
+
+/* КРЕСТИК спросить за block*/
+.modal-close-button::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/svg/close-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .modal-close-button::after:hover {
+  color: #000;
+}
+
+.modal-close-button::after:focus {
+  color: #000;
+} */
+
+
+/*
+.modal-close-button::after:active {
+  opacity: 0.3;
+} */
+
+
+
+
+
+/* стили для заголовка */
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: PT Sans;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.search-form {
+  display: grid;
+  grid-template-rows: 48px 48px 48px 60px;
+  row-gap: 48px;
+}
+
+/* div */
+.booking-dates-wrapper {
+  display: grid;
+  grid-template-columns: auto 440px;
+  /* grid-template-rows: 48px 48px; */
+  align-items: center;
+  position: relative;
+}
+
+
+/* лэйбл */
+.booking-dates-label {
+  width: 113px;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.date-button {
+  position: absolute;
+  right: 23px;
+  top: 18px;
+  border-image: url("../images/svg/calendar.svg");
+  block-size: 15px;
+  background-repeat: no-repeat;
+  /* width: 20px;
+  height: 20px; */
+}
+
+.search-form-field {
+  width: 440px;
+  min-height: 48px;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 40px 12px 20px;
+  background-color: #f2f2f2;
+
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+}
+
+
+/* p */
+
+.modal-comments {
+  grid-column: 2/-1;
+  position: absolute;
+  top: 50px;
+  margin: 0;
+  padding: 0 20px;
+  font-family: PT Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+}
+
+.comments-check-in {
+  color: #FF5757;
+}
+
+
+
+
+
+
+.input:active {
+
+
+}
+
+
+.input:hover {
+
+
+}
+
+
+
+
+.search-form-age {
+  width: 110px;
+}
+
+/* кнопка найти */
+
+.button-modal {
+  grid-column: 1px/-1px;
+  width: 577px;
+  padding: 18px 77px;
+  border-radius: 10px;
+
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+
+/* общий див */
+.wrapper-range-age {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* див - взрослые */
+.wrapper-range-adults {
+  display: flex;
+  justify-content: space-between;
+  width: 247px;
+  flex-wrap: nowrap;
+
+}
+
+/* див - дети */
+.wrapper-range-children {
+  display: flex;
+  justify-content: space-between;
+  width: 242px;
+  flex-wrap: nowrap;
+
+}
+
+/* див - лэйбл */
+.wrapper-label-adults,
+.wrapper-label-children {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 113px;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* див - плюс,минус */
+.wrapper-input-plus-minus {
+  display: flex;
+  width: 110px;
+  border-radius: 4px 0 0 4px ;
+
+
+}
+
+.button-plus-minus {
+  /* align-items: center; */
+  width: 40px;
+  min-height: 48px;
+  padding: 14px 10px;
+  border: none;
+  background-color: #f2f2f2;
+}
+/* background-color: rgba(117, 97, 87, 0.30); */
+
+.button-minus {
+  /* border-radius: 4px 0 0 4px ; */
+  /* попроболвать задать фон изображение */
+}
+
+.button-plus {
+  /* border-radius: 0 4px 4px 0; */
+}
+
+.input-number {
+
+  width: 30px;
+  min-height: 48px;
+  padding: 14px 7px;
+  border: none;
+  border-radius: none;
+  background-color: #F2F2F2;
+  color: #000000;
+  text-align: center;
+
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+
+/* span svg */
+.range-icon {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.svg-modal-minus:hover {
+  color: #000000;
+}
+
+.range-icon:focus {
+  color: #000000;
+  border: 3px solid #82B3D3;
+}
+
+.range-icon:active {
+  fill: currentColor;
+}
+
+
+
+
+
+
+
+
+/*
+.age-label-children::after {
+  content: "";
+  position: absolute;
+  padding: 0;
+  top: 11px;
+  right: 28px;
+  width: 26px;
+  height: 26px;
+  background-color: #83B3D3;
+  border: none;
+  border-radius: 50%;
+  background-image:  url("../images/svg/modal-tultip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+} */
+
+
+.wrapper-label-children {
+  position: relative;
+}
+
+
+/* .tooltip {
+  position: absolute;
+  top: 200px;
+  right: 70px;
+  display: block;
+  margin: 0;
+  width: 256px;
+  min-height: 143px;
+  padding: 15px 18px 18px 22px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+} */
+
+.tooltip-toggle {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 28px;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  cursor: pointer;
+}
+
+
+
+/* .tooltip-toggle:focus .tooltip-icon {
+состояние
+} */
+
+
+
+.tooltip-text {
+  display: block;
+  width: 256px;
+  min-height: 143;
+  border-radius: 10px;
+  background-color:  #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+
+  font-family: PT Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color:  #ffffff;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100px;
+  right: 70px;
+  display: block;
+  margin: 0;
+  width: 256px;
+  min-height: 143px;
+  padding: 15px 18px 18px 22px;
+}
+
+
+
+
+
+
+
+
+
+
+/*    Обрати внимание, что стилизация чекбоксов и радиокнопок, так же состояния у них одинаковые, разница только в радиусе и галочке, поэтому:
+                  1. Делаем одинаковые классы в списке для радиокнопок и чекбоксов
+                  2. Делаем одинаковые классы для label, input и span
+                  3. У чекбоксов name должен быть разный, у радиокнопок - одинаковый, можно тут посмотреть пример того, что выдает форма при прописке тех или иных атрибутов
+                  https://natalizotova.com/htmlacademy/input-check/ */
+
+ /*  1. Классы тегу option не задают, он не стилизуется
+ */
+
+ /*  5. Звезды - это абзац с двумя классами: 1 - общий, 2 - для количества звезд. Обрати внимание, что мы не будем нагромождать html кучей звезд, а возьмем картинку из 4-звезд и сделаем ее через css фоном, количество звезд будет определяться шириной блока, которая будет прописана как раз на втором классе
+ */
+
+ /*  6. Просто поправим класс для "Рейтинг: ..."
+            7. В наименовании файлов не должно быть заглавных букв, пробелов. Так как гит не воспринимает простую смену регистра в наименовании файлов, то нужно переименовать как-то по другому
+ */
+
+ /* Допустим:
+1. Коричневая (самая первая кнопка и чаще всего стречающаяся в проекте) - button
+2. Голубая - button и button-light
+3. Прозрачная - button и button-transparent */
+
+/* 2. Так же обрати внимание на крупные заголовки и текст под ними, у них одни и теже текстовые характеристики, это как бы заголовки и описания блоков, есть смысл добавить им один и тот же класс */
+
+/* 4. Инпуту добавляем доп класс, например "form-input", который будем так же добавлять на инпуты в фильтрах и модальном окне для общей стилизации самого инпута и его состояний, что бы не прописывать каждому элементу одно и тоже */
+
+
+/* использую в работе */
+
+/* * {
+  outline: 1px solid red !important;
+} */
