@@ -420,8 +420,10 @@ img {
 /* main */
 
 .greetings {
-  padding: 50px 70px 82px; /**/
-  color: #ffffff; /**/
+  padding: 50px 70px 82px;
+  /**/
+  color: #ffffff;
+  /**/
   background-color: #5c84ab;
   background-image: url("../images/svg/divider.svg"),
     url("../images/background/background-greetings.jpg");
@@ -601,8 +603,6 @@ img {
   margin-bottom: 55px;
 }
 
-3. Так как это inline-block то на него действует text-align у родителя
-/* то-есть, inline-block оставляем? */
 .search-button {
   display: inline-block;
   width: 376px;
@@ -938,9 +938,9 @@ img {
   position: absolute;
   top: -6px;
   right: 60px;
-} */
+}
 
-.range-toggle-min {
+*/ .range-toggle-min {
   left: 0;
 }
 
@@ -1358,9 +1358,7 @@ img {
 }
 
 
-
-
-
+/* Модальное окно */
 
 .modal-container {
   position: fixed;
@@ -1372,7 +1370,12 @@ img {
   background-color: rgba(242, 242, 242, 0.80);
 }
 
-/* модальное окно */
+/* активировать модальное окно
+.modal-container-close {
+  display: none;
+} */
+
+/* окно */
 .modal {
   width: 717px;
   min-height: 576px;
@@ -1382,6 +1385,7 @@ img {
   border-radius: 30px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 
 
@@ -1407,14 +1411,13 @@ img {
 }
 
 .modal-close-button:focus {
-outline: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
   outline: none
 }
 
-/* КРЕСТИК спросить за block*/
 .modal-close-button::after {
   content: "";
   display: block;
@@ -1425,24 +1428,6 @@ outline: 3px solid #83b3d3;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/* .modal-close-button::after:hover {
-  color: #000;
-}
-
-.modal-close-button::after:focus {
-  color: #000;
-} */
-
-
-/*
-.modal-close-button::after:active {
-  opacity: 0.3;
-} */
-
-
-
-
 
 /* стили для заголовка */
 .modal-title {
@@ -1466,7 +1451,6 @@ outline: 3px solid #83b3d3;
 .booking-dates-wrapper {
   display: grid;
   grid-template-columns: auto 440px;
-  /* grid-template-rows: 48px 48px; */
   align-items: center;
   position: relative;
 }
@@ -1491,8 +1475,6 @@ outline: 3px solid #83b3d3;
   border-image: url("../images/svg/calendar.svg");
   block-size: 15px;
   background-repeat: no-repeat;
-  /* width: 20px;
-  height: 20px; */
 }
 
 .search-form-field {
@@ -1513,7 +1495,6 @@ outline: 3px solid #83b3d3;
 
 
 /* p */
-
 .modal-comments {
   grid-column: 2/-1;
   position: absolute;
@@ -1532,25 +1513,6 @@ outline: 3px solid #83b3d3;
   color: #FF5757;
 }
 
-
-
-
-
-
-.input:active {
-
-
-}
-
-
-.input:hover {
-
-
-}
-
-
-
-
 .search-form-age {
   width: 110px;
 }
@@ -1562,7 +1524,6 @@ outline: 3px solid #83b3d3;
   width: 577px;
   padding: 18px 77px;
   border-radius: 10px;
-
 
   font-size: 20px;
   font-weight: 700;
@@ -1584,7 +1545,6 @@ outline: 3px solid #83b3d3;
   justify-content: space-between;
   width: 247px;
   flex-wrap: nowrap;
-
 }
 
 /* див - дети */
@@ -1593,7 +1553,6 @@ outline: 3px solid #83b3d3;
   justify-content: space-between;
   width: 242px;
   flex-wrap: nowrap;
-
 }
 
 /* див - лэйбл */
@@ -1616,28 +1575,47 @@ outline: 3px solid #83b3d3;
 .wrapper-input-plus-minus {
   display: flex;
   width: 110px;
-  border-radius: 4px 0 0 4px ;
-
-
+  border-radius: 4px 0 0 4px;
 }
 
 .button-plus-minus {
-  /* align-items: center; */
   width: 40px;
   min-height: 48px;
   padding: 14px 10px;
   border: none;
   background-color: #f2f2f2;
+  /* background-color: rgba(117, 97, 87, 0.30); */
 }
-/* background-color: rgba(117, 97, 87, 0.30); */
+
 
 .button-minus {
-  /* border-radius: 4px 0 0 4px ; */
-  /* попроболвать задать фон изображение */
+  border-radius: 4px 0 0 4px;
 }
 
 .button-plus {
-  /* border-radius: 0 4px 4px 0; */
+  border-radius: 0 4px 4px 0;
+}
+
+.svg-modal {
+  color: #7561574d;
+  color: rgba(117, 97, 87, 0.30);
+
+}
+
+.svg-modal:hover {
+  color: #000000;
+
+}
+
+.svg-modal:focus .range-icon {
+  color: #000000;
+  border-radius: 4px;
+  border: 2px solid #68a2ca;
+}
+
+.svg-modal:active {
+  color: #7561574d;
+
 }
 
 .input-number {
@@ -1686,57 +1664,26 @@ outline: 3px solid #83b3d3;
 
 
 
-
-
-
-
-
-/*
-.age-label-children::after {
-  content: "";
-  position: absolute;
-  padding: 0;
-  top: 11px;
-  right: 28px;
-  width: 26px;
-  height: 26px;
-  background-color: #83B3D3;
-  border: none;
-  border-radius: 50%;
-  background-image:  url("../images/svg/modal-tultip.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-} */
-
-
+/* дети - левая секция */
 .wrapper-label-children {
   position: relative;
 }
 
+/* i */
+.tooltip-icon {
+  background-position: center;
+}
 
-/* .tooltip {
-  position: absolute;
-  top: 200px;
-  right: 70px;
-  display: block;
-  margin: 0;
-  width: 256px;
-  min-height: 143px;
-  padding: 15px 18px 18px 22px;
+/* див для кнопки */
+.age-label {
+  position: relative;
+}
 
-  border: none;
-  border-radius: 10px;
-  background-color: #333333;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
-} */
-
+/* кнопка */
 .tooltip-toggle {
   display: block;
-  position: absolute;
-  top: 12px;
-  right: 28px;
-
+  position: relative;
+  left: 11px;
   border: none;
   padding: 0;
   margin: 0;
@@ -1748,20 +1695,31 @@ outline: 3px solid #83b3d3;
   cursor: pointer;
 }
 
+/* тултип */
+.tooltip {
+  position: absolute;
+  left: 48px;
+  display: block;
 
+}
 
-/* .tooltip-toggle:focus .tooltip-icon {
-состояние
+/* активировать тултип */
+
+/* .tooltip-close {
+  display: none;
 } */
-
-
 
 .tooltip-text {
   display: block;
+  position: absolute;
+  top: 12px;
+  left: -104px;
+
   width: 256px;
-  min-height: 143;
+  min-height: 143px;
+  padding: 20px 10px 20px 22px;
   border-radius: 10px;
-  background-color:  #333333;
+  background-color: #333333;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
 
   font-family: PT Sans;
@@ -1769,19 +1727,29 @@ outline: 3px solid #83b3d3;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color:  #ffffff;
+  color: #ffffff;
+  text-transform: none;
+
 }
 
-.tooltip {
-  position: absolute;
-  top: 100px;
-  right: 70px;
+/* .tooltip-toggle:hover + .tooltip,
+.tooltip-toggle:focus + .tooltip  {
   display: block;
-  margin: 0;
-  width: 256px;
-  min-height: 143px;
-  padding: 15px 18px 18px 22px;
+} */
+
+
+/* черная стрелка */
+.triangle-image {
+  position: absolute;
+  bottom: -28px;
+  left: 15px;
 }
+
+
+
+
+
+
 
 
 
@@ -1798,17 +1766,17 @@ outline: 3px solid #83b3d3;
                   3. У чекбоксов name должен быть разный, у радиокнопок - одинаковый, можно тут посмотреть пример того, что выдает форма при прописке тех или иных атрибутов
                   https://natalizotova.com/htmlacademy/input-check/ */
 
- /*  1. Классы тегу option не задают, он не стилизуется
+/*  1. Классы тегу option не задают, он не стилизуется
  */
 
- /*  5. Звезды - это абзац с двумя классами: 1 - общий, 2 - для количества звезд. Обрати внимание, что мы не будем нагромождать html кучей звезд, а возьмем картинку из 4-звезд и сделаем ее через css фоном, количество звезд будет определяться шириной блока, которая будет прописана как раз на втором классе
+/*  5. Звезды - это абзац с двумя классами: 1 - общий, 2 - для количества звезд. Обрати внимание, что мы не будем нагромождать html кучей звезд, а возьмем картинку из 4-звезд и сделаем ее через css фоном, количество звезд будет определяться шириной блока, которая будет прописана как раз на втором классе
  */
 
- /*  6. Просто поправим класс для "Рейтинг: ..."
+/*  6. Просто поправим класс для "Рейтинг: ..."
             7. В наименовании файлов не должно быть заглавных букв, пробелов. Так как гит не воспринимает простую смену регистра в наименовании файлов, то нужно переименовать как-то по другому
  */
 
- /* Допустим:
+/* Допустим:
 1. Коричневая (самая первая кнопка и чаще всего стречающаяся в проекте) - button
 2. Голубая - button и button-light
 3. Прозрачная - button и button-transparent */
