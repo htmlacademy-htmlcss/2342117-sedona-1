@@ -144,6 +144,7 @@ img {
   background-color: transparent;
 }
 
+
 /*
 СВОЙСТВА ДЛЯ INPUT
 */
@@ -420,8 +421,10 @@ img {
 /* main */
 
 .greetings {
-  padding: 50px 70px 82px; /**/
-  color: #ffffff; /**/
+  padding: 50px 70px 82px;
+  /**/
+  color: #ffffff;
+  /**/
   background-color: #5c84ab;
   background-image: url("../images/svg/divider.svg"),
     url("../images/background/background-greetings.jpg");
@@ -601,8 +604,6 @@ img {
   margin-bottom: 55px;
 }
 
-3. Так как это inline-block то на него действует text-align у родителя
-/* то-есть, inline-block оставляем? */
 .search-button {
   display: inline-block;
   width: 376px;
@@ -938,9 +939,9 @@ img {
   position: absolute;
   top: -6px;
   right: 60px;
-} */
+}
 
-.range-toggle-min {
+*/ .range-toggle-min {
   left: 0;
 }
 
@@ -1357,465 +1358,332 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
-
-
-
-
+/* Модальное окно */
 
 .modal-container {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
+
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(242, 242, 242, 0.80);
+
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
-/* модальное окно */
+.modal-container-close {
+  display: none;
+}
+
+/* окно */
 .modal {
-  width: 717px;
-  min-height: 576px;
   position: relative;
+  z-index: 1;
+
+  width: 717px;
   margin: auto;
   padding: 64px 70px;
-  border-radius: 30px;
+
   background-color: #ffffff;
+  border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
-
 
 /* фон для крестика */
 .modal-close-button {
   position: absolute;
-  padding: 0;
   top: 64px;
   right: 52px;
+
   width: 52px;
   height: 52px;
+  padding: 0;
+
   background-color: #f2f2f2;
-  border: none;
-  border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
 }
 
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 17px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
 }
 
 .modal-close-button:focus {
-outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
 .modal-close-button:active {
-  outline: none
+  box-shadow: none;
 }
 
-/* КРЕСТИК спросить за block*/
-.modal-close-button::after {
-  content: "";
-  display: block;
-  margin: auto;
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/svg/close-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* .modal-close-button::after:hover {
-  color: #000;
-}
-
-.modal-close-button::after:focus {
-  color: #000;
-} */
-
-
-/*
-.modal-close-button::after:active {
+.modal-close-button:active::before,
+.modal-close-button:active::after {
   opacity: 0.3;
-} */
+}
 
-
-
-
-
-/* стили для заголовка */
 .modal-title {
-  margin: 0;
-  margin-bottom: 64px;
-  font-family: PT Sans;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
+  margin: 0 40px 63px 0;
+  text-align: left;
 }
 
-.search-form {
+.form {
   display: grid;
-  grid-template-rows: 48px 48px 48px 60px;
-  row-gap: 48px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 23px 80px;
 }
 
-/* div */
-.booking-dates-wrapper {
+.form-group {
   display: grid;
-  grid-template-columns: auto 440px;
-  /* grid-template-rows: 48px 48px; */
+  grid-template-columns: 120px 1fr;
+  gap: 5px 16px;
   align-items: center;
-  position: relative;
+  margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
+.date {
+  grid-column: 1/-1;
+}
 
-/* лэйбл */
-.booking-dates-label {
-  width: 113px;
-  font-family: PT Sans;
-  font-size: 20px;
-  font-style: normal;
+.form-label {
   font-weight: 700;
+  font-size: 20px;
   line-height: 24px;
-  text-transform: capitalize;
-  white-space: nowrap;
+  color: #000000;
 }
 
-.date-button {
-  position: absolute;
-  right: 23px;
-  top: 18px;
-  border-image: url("../images/svg/calendar.svg");
-  block-size: 15px;
-  background-repeat: no-repeat;
-  /* width: 20px;
-  height: 20px; */
-}
-
-.search-form-field {
-  width: 440px;
-  min-height: 48px;
-  border: 0;
-  border-radius: 4px;
+.date-input {
   padding: 12px 40px 12px 20px;
-  background-color: #f2f2f2;
 
-  font-family: PT Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  color: #000;
+  background-image: url("../images/svg/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px 20px;
 }
 
-
-/* p */
-
-.modal-comments {
+.form-comments {
   grid-column: 2/-1;
-  position: absolute;
-  top: 50px;
   margin: 0;
-  padding: 0 20px;
-  font-family: PT Sans;
+
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 21px;
-  color: #333333;
+  text-indent: 20px;
 }
 
-.comments-check-in {
-  color: #FF5757;
+.form-comments-error {
+  color: #ff5757;
 }
 
+.form-button {
+  grid-column: 1/-1;
+  margin-top: 25px;
+  padding: 18px;
 
+  font-size: 20px;
+  line-height: 24px;
 
-
-
-
-.input:active {
-
-
-}
-
-
-.input:hover {
-
-
-}
-
-
-
-
-.search-form-age {
-  width: 110px;
-}
-
-/* кнопка найти */
-
-.button-modal {
-  grid-column: 1px/-1px;
-  width: 577px;
-  padding: 18px 77px;
   border-radius: 10px;
-
-
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-transform: uppercase;
 }
 
-
-/* общий див */
-.wrapper-range-age {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
-/* див - взрослые */
-.wrapper-range-adults {
-  display: flex;
-  justify-content: space-between;
-  width: 247px;
-  flex-wrap: nowrap;
-
-}
-
-/* див - дети */
-.wrapper-range-children {
-  display: flex;
-  justify-content: space-between;
-  width: 242px;
-  flex-wrap: nowrap;
-
-}
-
-/* див - лэйбл */
-.wrapper-label-adults,
-.wrapper-label-children {
-  display: flex;
-  align-items: center;
+.people-input-container {
   position: relative;
-  width: 113px;
-  font-family: PT Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  text-transform: capitalize;
-  white-space: nowrap;
 }
 
-/* див - плюс,минус */
-.wrapper-input-plus-minus {
-  display: flex;
-  width: 110px;
-  border-radius: 4px 0 0 4px ;
+.people-input {
+  padding: 10px 30px;
 
-
-}
-
-.button-plus-minus {
-  /* align-items: center; */
-  width: 40px;
-  min-height: 48px;
-  padding: 14px 10px;
-  border: none;
-  background-color: #f2f2f2;
-}
-/* background-color: rgba(117, 97, 87, 0.30); */
-
-.button-minus {
-  /* border-radius: 4px 0 0 4px ; */
-  /* попроболвать задать фон изображение */
-}
-
-.button-plus {
-  /* border-radius: 0 4px 4px 0; */
-}
-
-.input-number {
-
-  width: 30px;
-  min-height: 48px;
-  padding: 14px 7px;
-  border: none;
-  border-radius: none;
-  background-color: #F2F2F2;
-  color: #000000;
-  text-align: center;
-
-  font-family: PT Sans;
-  font-size: 18px;
-  font-weight: 700;
   line-height: 20px;
+  text-align: center;
 }
 
-.input-number::-webkit-outer-spin-button,
-.input-number::-webkit-inner-spin-button {
-  appearance: none;
+.people-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 40px;
+  height: 100%;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-
-/* span svg */
-.range-icon {
-  display: flex;
-  align-items: center;
-  width: 20px;
-  height: 20px;
+.people-button-minus {
+  left: 0;
 }
 
-.svg-modal-minus:hover {
-  color: #000000;
+.people-button-plus {
+  right: 0;
 }
 
-.range-icon:focus {
-  color: #000000;
-  border: 3px solid #82B3D3;
+.people-button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 25px;
+  height: 25px;
+
+  color: #756157;
+
+  border: 3px solid transparent;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
 }
 
-.range-icon:active {
-  fill: currentColor;
-}
-
-
-
-
-
-
-
-
-/*
-.age-label-children::after {
+.people-button-icon::before,
+.people-button-icon::after {
   content: "";
   position: absolute;
-  padding: 0;
-  top: 11px;
-  right: 28px;
-  width: 26px;
-  height: 26px;
-  background-color: #83B3D3;
-  border: none;
-  border-radius: 50%;
-  background-image:  url("../images/svg/modal-tultip.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-} */
+  top: 50%;
+  left: 50%;
 
+  width: 13px;
+  height: 2px;
 
-.wrapper-label-children {
-  position: relative;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
 }
 
-
-/* .tooltip {
-  position: absolute;
-  top: 200px;
-  right: 70px;
-  display: block;
-  margin: 0;
-  width: 256px;
-  min-height: 143px;
-  padding: 15px 18px 18px 22px;
-
-  border: none;
-  border-radius: 10px;
-  background-color: #333333;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
-} */
-
-.tooltip-toggle {
-  display: block;
-  position: absolute;
-  top: 12px;
-  right: 28px;
-
-  border: none;
-  padding: 0;
-  margin: 0;
-
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: #83B3D3;
-  cursor: pointer;
+.people-button-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.people-button-minus .people-button-icon::after {
+  display: none;
+}
 
+.people-button:hover .people-button-icon {
+  color: #000000;
+  opacity: 1;
+}
 
-/* .tooltip-toggle:focus .tooltip-icon {
-состояние
-} */
+.people-button:focus {
+  outline: none;
+}
 
+.people-button:focus .people-button-icon {
+  color: #000000;
 
+  border-color: #68a2ca;
+  opacity: 1;
+}
 
-.tooltip-text {
-  display: block;
-  width: 256px;
-  min-height: 143;
-  border-radius: 10px;
-  background-color:  #333333;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+.people-button:active .people-button-icon {
+  color: #000000;
 
-  font-family: PT Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  color:  #ffffff;
+  border-color: transparent;
+  opacity: 0.2;
+}
+
+.tooltip-container {
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
 }
 
 .tooltip {
-  position: absolute;
-  top: 100px;
-  right: 70px;
-  display: block;
-  margin: 0;
-  width: 256px;
-  min-height: 143px;
-  padding: 15px 18px 18px 22px;
+  position: relative;
+  display: flex;
+  margin-left: 11px;
+
+  place-content: center;
 }
 
+.tooltip-toggle {
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
 
+  background-color: #83b3d3;
+  background-image: url("../images/svg/icon-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2px 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
 
+  display: none;
+  width: 256px;
+  margin: 14px 0 0;
+  padding: 20px 22px 23px;
 
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+}
 
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  z-index: -1;
 
+  width: 12px;
+  height: 12px;
 
+  background-color: #333333;
+  transform: translateX(-50%) rotate(45deg);
+}
 
-/*    Обрати внимание, что стилизация чекбоксов и радиокнопок, так же состояния у них одинаковые, разница только в радиусе и галочке, поэтому:
-                  1. Делаем одинаковые классы в списке для радиокнопок и чекбоксов
-                  2. Делаем одинаковые классы для label, input и span
-                  3. У чекбоксов name должен быть разный, у радиокнопок - одинаковый, можно тут посмотреть пример того, что выдает форма при прописке тех или иных атрибутов
-                  https://natalizotova.com/htmlacademy/input-check/ */
+.tooltip-toggle:hover + .tooltip-text {
+  display: block;
+}
 
- /*  1. Классы тегу option не задают, он не стилизуется
- */
+.tooltip-toggle:focus {
+  outline: none;
+}
 
- /*  5. Звезды - это абзац с двумя классами: 1 - общий, 2 - для количества звезд. Обрати внимание, что мы не будем нагромождать html кучей звезд, а возьмем картинку из 4-звезд и сделаем ее через css фоном, количество звезд будет определяться шириной блока, которая будет прописана как раз на втором классе
- */
-
- /*  6. Просто поправим класс для "Рейтинг: ..."
-            7. В наименовании файлов не должно быть заглавных букв, пробелов. Так как гит не воспринимает простую смену регистра в наименовании файлов, то нужно переименовать как-то по другому
- */
-
- /* Допустим:
-1. Коричневая (самая первая кнопка и чаще всего стречающаяся в проекте) - button
-2. Голубая - button и button-light
-3. Прозрачная - button и button-transparent */
-
-/* 2. Так же обрати внимание на крупные заголовки и текст под ними, у них одни и теже текстовые характеристики, это как бы заголовки и описания блоков, есть смысл добавить им один и тот же класс */
-
-/* 4. Инпуту добавляем доп класс, например "form-input", который будем так же добавлять на инпуты в фильтрах и модальном окне для общей стилизации самого инпута и его состояний, что бы не прописывать каждому элементу одно и тоже */
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
 
 
 /* использую в работе */
