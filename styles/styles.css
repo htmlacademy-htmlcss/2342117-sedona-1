@@ -23,11 +23,14 @@
 }
 
 html {
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
   height: 100%;
 }
 
 body {
+  min-width: 1280px;
   height: 100%;
   margin: 0;
   font-weight: 400;
@@ -54,7 +57,8 @@ img {
   white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
 }
 
 .button {
@@ -95,10 +99,6 @@ img {
   pointer-events: none;
 }
 
-/*
-ПРОПИСЫВАЕМ СВОЙСТВА ДЛЯ ГОЛУБЫХ И ПРОЗРАЧНЫХ КНОПОК
-Так же прописываем для них состояния, перебиваем только то что нужно
-*/
 .button-light {
   background-color: #82b3d3;
 }
@@ -164,16 +164,20 @@ img {
   border: 2px solid transparent;
   border-radius: 4px;
 
-  appearance: none;
+  -webkit-appearance: none;
+
+          appearance: none;
 }
 
 .form-input[type="number"] {
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .form-input::-webkit-outer-spin-button,
 .form-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .form-input::placeholder {
@@ -238,7 +242,7 @@ img {
   text-align: center;
 }
 
-/* Свойства для заголовка h1, страниц может быть много вынесем в отдельный класс эти свойства */
+/* Свойства для заголовка h1 */
 .page-main-title {
   margin: 0;
 
@@ -276,6 +280,8 @@ img {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+  align-items: start;
+
 }
 
 .logo {
@@ -285,8 +291,6 @@ img {
   cursor: pointer;
 }
 
-/* Можно было сделать просто прозрачностью, а не фильтром */
-/* .logo-link:hover */
 .logo:hover {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
@@ -357,7 +361,6 @@ img {
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
-  align-items: start;
   max-width: 150px;
   margin: 0;
   padding: 0;
@@ -416,17 +419,13 @@ img {
 .navigation-button {
   width: 160px;
   margin: 14px 0;
-  min-height: 36px;
-  max-height: 66px;
 }
 
 /* main */
 
 .greetings {
   padding: 50px 70px 82px;
-  /**/
   color: #ffffff;
-  /**/
   background-color: #5c84ab;
   background-image: url("../images/svg/divider.svg"),
     url("../images/background/background-greetings.jpg");
@@ -603,7 +602,7 @@ img {
 }
 
 .search-text {
-  margin-bottom: 55px;
+  margin-bottom: 54px;
 }
 
 .search-button {
@@ -616,7 +615,7 @@ img {
 /* ПОДПИСКА */
 
 .subscribe {
-  padding: 96px 70px 103px;
+  padding: 96px 70px 104px;
 }
 
 .subscribe-home {
@@ -629,7 +628,7 @@ img {
 }
 
 .subscribe-title {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .subscribe-home .subscribe-title {
@@ -637,7 +636,7 @@ img {
 }
 
 .subscribe-text {
-  margin-bottom: 55px;
+  margin-bottom: 54px;
 }
 
 .subscribe-form {
@@ -805,7 +804,9 @@ img {
   border-radius: 4px;
   cursor: pointer;
 
-  appearance: none;
+  -webkit-appearance: none;
+
+          appearance: none;
 }
 
 .control-input[type="checkbox"]:checked {
@@ -937,12 +938,6 @@ img {
   cursor: pointer;
 }
 
-/* .toggle-max {
-  position: absolute;
-  top: -6px;
-  right: 60px;
-} */
-
 .range-toggle-min {
   left: 0;
 }
@@ -1009,7 +1004,9 @@ img {
   border-radius: 4px;
   cursor: pointer;
 
-  appearance: none;
+  -webkit-appearance: none;
+
+          appearance: none;
 }
 
 .sorting-select:hover {
@@ -1059,9 +1056,7 @@ img {
   height: 14px;
 }
 
-.view-link-active {
-  border-color: #000000;
-}
+
 
 .view-link:hover {
   border-color: #000000;
@@ -1170,7 +1165,13 @@ img {
   background-color: #e5e5e5;
 }
 
-/* Прописываем высоту и фоновые характеристики */
+.hotels-button-more,
+.hotels-favorites-active,
+.hotels-favorites {
+  align-self: center;
+}
+
+
 /* stars */
 .hotels-rating-star {
   height: 37px;
@@ -1378,7 +1379,6 @@ img {
   display: none;
 }
 
-/* окно */
 .modal {
   position: relative;
   z-index: 1;
@@ -1685,10 +1685,3 @@ img {
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
-
-
-/* использую в работе */
-
-/* * {
-  outline: 1px solid red !important;
-} */
