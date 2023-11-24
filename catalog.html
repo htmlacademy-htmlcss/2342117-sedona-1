@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sedona</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body>
@@ -54,6 +56,7 @@
                   <path d="M4.37109 10.5001H5.37109V8.00005H7.37109V10.5001H8.37109V7.00005H4.37109V10.5001Z" />
                 </svg>
               </a>
+              <span class="visually-hidden">Вернуться на главную.</span>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link breadcrumbs-link-current" href="catalog.html" aria-current="page">Гостиницы</a>
@@ -108,14 +111,16 @@
                 </ul>
               </fieldset>
               <fieldset class="filter-group filter-group-range">
-                <legend class="filter-title">Cтоимость, &#8381;</legend>
+                <legend class="filter-title">Cтоимость, &#8381;:</legend>
                 <div class="range">
                   <div class="range-input-container">
                     <div class="range-item">
+                      <span class="visually-hidden">Введите минимальную цену.</span>
                       <input class="range-input range-input-min form-input" id="min-price" name="min-price" type="number" placeholder="0" value="0" min="0" max="9000">
                       <label for="min-price">от</label>
                     </div>
                     <div class="range-item">
+                      <span class="visually-hidden">Введите максимальную цену.</span>
                       <input class="range-input range-input-max form-input" id="max-price" name="max-price" type="number" placeholder="9000" value="9000" min="1" max="9000">
                       <label for="max-price">до</label>
                     </div>
@@ -192,7 +197,7 @@
             <ul class="hotels-list">
               <li class="hotels-item">
                 <a class="hotels-link" href="#">
-                  <img src="images/hotels/hotels-amara.jpg" alt="Отель Амара резорт." width="300" height="212">
+                  <img class="gallery-images" src="images/hotels/hotels-amara.jpg" alt="Отель Амара резорт." width="300" height="212">
                   <h3 class="hotels-title">Amara Resort &amp; Spa</h3>
                 </a>
                 <p class="hotels-text hotels-text-type">Гостиница</p>
@@ -206,7 +211,7 @@
               </li>
               <li class="hotels-item">
                 <a class="hotels-link" href="#">
-                  <img src="images/hotels/hotels-villas.jpg" alt="Villas at Poco Diablo" width="300" height="212">
+                  <img class="gallery-images" src="images/hotels/hotels-villas.jpg" alt="Villas at Poco Diablo" width="300" height="212">
                   <h3 class="hotels-title">Villas at Poco Diablo</h3>
                 </a>
                 <p class="hotels-text hotels-text-type">Гостиница</p>
@@ -220,7 +225,7 @@
               </li>
               <li class="hotels-item">
                 <a class="hotels-link" href="#">
-                  <img src="images/hotels/hotels-desert.jpg" alt="Desert Quail Inn" width="300" height="212">
+                  <img class="gallery-images" src="images/hotels/hotels-desert.jpg" alt="Desert Quail Inn" width="300" height="212">
                   <h3 class="hotels-title">Desert Quail Inn</h3>
                 </a>
                 <p class="hotels-text hotels-text-type">Гостиница</p>
@@ -234,7 +239,7 @@
               </li>
               <li class="hotels-item">
                 <a class="hotels-link" href="#">
-                  <img src="images/hotels/hotels-green.jpg" alt="GreenTree Inn" width="300" height="212">
+                  <img class="gallery-images" src="images/hotels/hotels-green.jpg" alt="GreenTree Inn" width="300" height="212">
                   <h3 class="hotels-title">GreenTree Inn</h3>
                 </a>
                 <p class="hotels-text hotels-text-type">Гостиница</p>
@@ -248,6 +253,7 @@
               </li>
             </ul>
             <ul class="hotels-pagination pagination">
+              <span class="visually-hidden">Нумерация страниц.</span>
               <li class="pagination-item">
                 <a class="pagination-link pagination-link-current" href="#" aria-current="page">1</a>
               </li>
@@ -262,6 +268,7 @@
               </li>
               <li class="pagination-item">
                 <a class="pagination-link pagination-link-more" href="#">...</a>
+                <span class="visually-hidden">Показать больше стариниц.</span>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
@@ -308,6 +315,8 @@
           </li>
         </ul>
         <a class="page-footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <span class="visually-hidden">Связаться с нами по телефону.</span>
+
         <a class="website-htmlacademy" href="https://htmlacademy.ru/">
           <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="115" height="34" viewBox="0 0 115 34">
             <path d="M0 13.7232V16.3232H2.5V13.7232H0Z" />
@@ -324,6 +333,7 @@
             <path d="M109.4 27.8232L105.8 18.9232H103.6L108.4 30.5232C108.1 31.4232 107.7 31.7232 106.7 31.7232H104.2V33.7232H106.7C108.5 33.7232 109.5 32.9232 110.2 31.1232L114.9 18.9232H112.8L109.4 27.8232Z" />
           </svg>
         </a>
+        <span class="visually-hidden">Перейти на сайт html academy.</span>
       </footer>
     </div>
   </body>

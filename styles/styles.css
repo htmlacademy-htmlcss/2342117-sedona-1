@@ -23,8 +23,8 @@
 }
 
 html {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   box-sizing: border-box;
   height: 100%;
 }
@@ -369,9 +369,11 @@ img {
 
 .navigation-user-link {
   position: relative;
+  top: 1px;
+  left: -2px;
   display: block;
-  width: 45px;
-  height: 62px;
+  width: 44px;
+  height: 64px;
   text-decoration: none;
 
   background-repeat: no-repeat;
@@ -481,16 +483,18 @@ img {
 .advantages-content {
   width: 400px;
   min-height: 385px;
-  padding: 115px 85px 100px;
+  padding: 113px 85px 100px;
 }
 
 .advantages-item-full .advantages-content {
-  padding-top: 105px;
+  padding-top: 103px;
 }
 
+/* у меня не получается сдвинуть влево первый title. Только если так
+.advantages-title:first-child. Но нужно ли ? */
 .advantages-title {
   position: relative;
-  margin: 0 0 30px;
+  margin: 0 0 31px;
   padding-bottom: 30px;
   font-weight: 700;
   font-size: 24px;
@@ -764,6 +768,7 @@ img {
 }
 
 .filter-title {
+  max-width: 288px;
   margin-bottom: 33px;
   padding: 0;
 
@@ -813,7 +818,7 @@ img {
   background-image: url("../images/svg/icon-check.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 13px 11px;
+  background-size: 20px 20px;
 }
 
 .control-input[type="radio"] {
@@ -833,10 +838,6 @@ img {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-
-/*
-НЕТ СОСТОЯНИЙ ДЛЯ ЧЕКБОКСОВ И РАДИОКНОПОК
-*/
 
 .control-label:hover {
   opacity: 0.6;
@@ -970,6 +971,14 @@ img {
 .filter-submit {
   margin-bottom: 31px;
 }
+/* в сафари не отображается голубая рамка у кнопки "сбросиь"
+Так же, у нас есть в этой кнопке не задействованный класс
+filter-reset
+ */
+
+
+
+
 
 /* панель под фильтром */
 
@@ -978,7 +987,7 @@ img {
   grid-template-columns: 1fr auto auto;
   gap: 70px;
   align-items: center;
-  padding: 50px 70px 39px;
+  padding: 50px 70px 40px;
 }
 
 .sorting-title {
@@ -1056,7 +1065,10 @@ img {
   height: 14px;
 }
 
-
+/* в сафари , так же как у кнопки "сбросить", не отображается голубая рамка у view-link */
+.view-link-active {
+  border-color: #000000;
+}
 
 .view-link:hover {
   border-color: #000000;
@@ -1084,7 +1096,7 @@ img {
 .hotels-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 17px 20px;
+  gap: 19px 20px;
   margin: 0;
   padding: 0 0 40px;
   list-style: none;
@@ -1123,10 +1135,17 @@ img {
   opacity: 0.3;
 }
 
+
 .hotels-link img {
   display: block;
   width: 100%;
-  margin-bottom: 18px;
+  min-height: 212px;
+  margin-bottom: 16px;
+}
+
+.gallery-images {
+ display: block;
+ object-fit: contain;
 }
 
 .hotels-title {
