@@ -23,8 +23,6 @@
 }
 
 html {
-  /* display: flex;
-  justify-content: center; */
   box-sizing: border-box;
   height: 100%;
 }
@@ -58,7 +56,7 @@ img {
   border: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .button {
@@ -144,11 +142,6 @@ img {
   background-color: transparent;
 }
 
-
-/*
-СВОЙСТВА ДЛЯ INPUT
-*/
-
 .form-input {
   width: 100%;
   height: 48px;
@@ -166,18 +159,18 @@ img {
 
   -webkit-appearance: none;
 
-          appearance: none;
+  appearance: none;
 }
 
 .form-input[type="number"] {
   -webkit-appearance: textfield;
-          appearance: textfield;
+  appearance: textfield;
 }
 
 .form-input::-webkit-outer-spin-button,
 .form-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .form-input::placeholder {
@@ -220,9 +213,6 @@ img {
   border-color: #ff5757;
 }
 
-/*
-СВОЙСТВА ДЛЯ ЗАГОЛОВКОВ И ТЕКСТА ПОД НИМ
-*/
 .page-title {
   margin: 0;
 
@@ -242,7 +232,6 @@ img {
   text-align: center;
 }
 
-/* Свойства для заголовка h1 */
 .page-main-title {
   margin: 0;
 
@@ -274,14 +263,11 @@ img {
   padding: 0 70px;
 }
 
-/* НАВИГАЦИЯ */
-
 .navigation {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
   align-items: start;
-
 }
 
 .logo {
@@ -316,7 +302,7 @@ img {
 .navigation-main {
   display: flex;
   flex-wrap: wrap;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto 0 0;
   padding: 0;
   list-style: none;
@@ -355,8 +341,6 @@ img {
 .navigation-main-link:active {
   background-color: #e6e6e6;
 }
-
-/* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
 
 .navigation-user {
   display: flex;
@@ -423,8 +407,6 @@ img {
   margin: 14px 0;
 }
 
-/* main */
-
 .greetings {
   padding: 50px 70px 82px;
   color: #ffffff;
@@ -483,15 +465,13 @@ img {
 .advantages-content {
   width: 400px;
   min-height: 385px;
-  padding: 113px 85px 100px;
+  padding: 113px 80px 100px;
 }
 
 .advantages-item-full .advantages-content {
   padding-top: 103px;
 }
 
-/* у меня не получается сдвинуть влево первый title. Только если так
-.advantages-title:first-child. Но нужно ли ? */
 .advantages-title {
   position: relative;
   margin: 0 0 31px;
@@ -545,7 +525,6 @@ img {
   margin-bottom: 20px;
 }
 
-/* рекомендации */
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -593,9 +572,6 @@ img {
   margin: 0;
 }
 
-
-/* ОФЕР */
-
 .search {
   padding: 96px 70px;
   text-align: center;
@@ -615,8 +591,6 @@ img {
   font-size: 20px;
   line-height: 36px;
 }
-
-/* ПОДПИСКА */
 
 .subscribe {
   padding: 96px 70px 104px;
@@ -668,8 +642,6 @@ img {
   line-height: 36px;
   border-radius: 0 4px 4px 0;
 }
-
-/* фильтр */
 
 .filter {
   padding: 34px 70px 70px;
@@ -811,7 +783,7 @@ img {
 
   -webkit-appearance: none;
 
-          appearance: none;
+  appearance: none;
 }
 
 .control-input[type="checkbox"]:checked {
@@ -853,7 +825,7 @@ img {
 }
 
 .control-input:disabled,
-.control-input:disabled + .control-text {
+.control-input:disabled+.control-text {
   opacity: 0.3;
 
   pointer-events: none;
@@ -971,16 +943,6 @@ img {
 .filter-submit {
   margin-bottom: 31px;
 }
-/* в сафари не отображается голубая рамка у кнопки "сбросиь"
-Так же, у нас есть в этой кнопке не задействованный класс
-filter-reset
- */
-
-
-
-
-
-/* панель под фильтром */
 
 .sorting {
   display: grid;
@@ -1015,7 +977,7 @@ filter-reset
 
   -webkit-appearance: none;
 
-          appearance: none;
+  appearance: none;
 }
 
 .sorting-select:hover {
@@ -1065,7 +1027,6 @@ filter-reset
   height: 14px;
 }
 
-/* в сафари , так же как у кнопки "сбросить", не отображается голубая рамка у view-link */
 .view-link-active {
   border-color: #000000;
 }
@@ -1087,8 +1048,6 @@ filter-reset
   opacity: 0.3;
 }
 
-/* ГАЛЕРЕЯ */
-
 .hotels {
   padding: 0 70px;
 }
@@ -1096,7 +1055,7 @@ filter-reset
 .hotels-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 19px 20px;
+  gap: 17px 20px;
   margin: 0;
   padding: 0 0 40px;
   list-style: none;
@@ -1108,11 +1067,11 @@ filter-reset
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
   align-content: start;
+  align-items: start;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
-
 
 .hotels-link {
   display: block;
@@ -1120,7 +1079,6 @@ filter-reset
   color: #000000;
   text-decoration: none;
 }
-
 
 .hotels-link:hover {
   opacity: 0.6;
@@ -1135,7 +1093,6 @@ filter-reset
   opacity: 0.3;
 }
 
-
 .hotels-link img {
   display: block;
   width: 100%;
@@ -1144,8 +1101,8 @@ filter-reset
 }
 
 .gallery-images {
- display: block;
- object-fit: contain;
+  display: block;
+  object-fit: contain;
 }
 
 .hotels-title {
@@ -1159,7 +1116,7 @@ filter-reset
   margin: 0;
 }
 
-.hotels-text + .hotels-text {
+.hotels-text+.hotels-text {
   text-align: right;
 }
 
@@ -1184,14 +1141,6 @@ filter-reset
   background-color: #e5e5e5;
 }
 
-.hotels-button-more,
-.hotels-favorites-active,
-.hotels-favorites {
-  align-self: center;
-}
-
-
-/* stars */
 .hotels-rating-star {
   height: 37px;
   background-image: url("../images/svg/stars.svg");
@@ -1221,7 +1170,6 @@ filter-reset
   border-radius: 4px;
 }
 
-
 .pagination {
   display: flex;
   gap: 8px;
@@ -1250,7 +1198,6 @@ filter-reset
   border: 1px solid #82b3d3;
   border-radius: 4px;
 }
-
 
 .pagination-link:hover {
   color: #ffffff;
@@ -1379,8 +1326,6 @@ filter-reset
   color: rgba(117, 97, 87, 0.3);
 }
 
-/* Модальное окно */
-
 .modal-container {
   position: fixed;
   top: 0;
@@ -1394,6 +1339,7 @@ filter-reset
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+/* закрывает модальное окно */
 .modal-container-close {
   display: none;
 }
@@ -1411,7 +1357,6 @@ filter-reset
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* фон для крестика */
 .modal-close-button {
   position: absolute;
   top: 64px;
@@ -1667,7 +1612,7 @@ filter-reset
   display: none;
   width: 256px;
   margin: 14px 0 0;
-  padding: 20px 22px 23px;
+  padding: 20px 21px 23px;
 
   font-size: 16px;
   line-height: 20px;
@@ -1693,7 +1638,7 @@ filter-reset
   transform: translateX(-50%) rotate(45deg);
 }
 
-.tooltip-toggle:hover + .tooltip-text {
+.tooltip-toggle:hover+.tooltip-text {
   display: block;
 }
 
@@ -1701,6 +1646,6 @@ filter-reset
   outline: none;
 }
 
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus+.tooltip-text {
   display: block;
 }

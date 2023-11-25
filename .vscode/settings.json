@@ -22,8 +22,6 @@
   "html.format.indentInnerHtml": true
 }
 
-// не уверен что сделал правильно
-
 {
   // Форматировать при сохранении
   "editor.formatOnSave": true,
