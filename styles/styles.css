@@ -1019,12 +1019,12 @@ img {
   background-image: url("../images/svg/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center right 18px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
   cursor: pointer;
 
   -webkit-appearance: none;
   appearance: none;
-  bcborder: 2px solid #e5e5e5;
-  borderadius: 4px;
 }
 
 .sorting-select:hover {
